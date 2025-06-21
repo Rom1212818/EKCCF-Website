@@ -1,264 +1,40 @@
-<!DOCTYPE html>
-<html lang="ko">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>에드먼튼 한인문화재단</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <div class="top-header">
-        <div class="logo-text"></div>
-      
-        <div class="top-right-group">
-          <div class="language-switcher">
-            <button>한국어</button>
-            <button>English</button>
-          </div>
-          <div class="search-bar">
-            <input type="text" placeholder="검색..." />
-          </div>
-        </div>
-      </div>
-      
-      
-  <header>
-    <nav class="navbar">
-        
+document.addEventListener('DOMContentLoaded', () => {
+const slides = document.querySelectorAll('.slider-box');
+const slideTrack = document.querySelector('.slider-boxes');
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+const slideNumber = document.getElementById('slide-number');
 
-      <div class="nav-container">
-        <!-- Left: Logo and EKCCF -->
-        <div class="nav-left">
-          <a href="index.html" class="nav-branding">
-            <img src="images/logo3.png" alt="EKCCF 로고" />
-            <span class="nav-text">에드먼튼 한인문화재단</span>
-          </a>
-          <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        
+let current = 0;
 
-        <!-- Center: Navigation menu -->
-        <ul class="nav-menu">
-          <li class="dropdown">
-            <a href="about.html">재단소개</a>
-            <ul class="dropdown-menu">
-              <li><a href="history.html">역사</a></li>
-              <li><a href="organization.html">조직도</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="culture.html">세종문화원</a>
-            <ul class="dropdown-menu">
-              <li><a href="programs.html">프로그램</a></li>
-              <li><a href="facility.html">시설 안내</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="orchestra.html">세종오케스트라</a>
-            <ul class="dropdown-menu">
-              <li><a href="performance.html">정기공연</a></li>
-              <li><a href="orchestra-members.html">단원</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="choir.html">세종합창단</a>
-            <ul class="dropdown-menu">
-              <li><a href="children-choir.html">어린이 합창단</a></li>
-              <li><a href="mothers-choir.html">어머니 합창단</a></li>
-            </ul>
-          </li>
-          <li><a href="inquiry.html">문의</a></li>
-          <li><a href="announcement.html">공지사항</a></li>
-        </ul>
+function updateSlide(index) {
+  const offset = -index * 100;
+  slideTrack.style.transform = `translateX(${offset}%)`;
 
-      </div>
-    </nav>
-  </header>
+  // Update number display (01, 02, etc.)
+  slideNumber.textContent = String(index + 1).padStart(2, '0');
+}
 
-  <!-- Hero Slider Section -->
-  <section class="hero-slider">
-    <div class="hero-slider-active">
-      <div class="slider-boxes">
-  
-        <!-- Slide 1 -->
-        <div class="slider-box active">
-          <div class="slider-content">
-            <h2 class="text-effect">EKCCF 여름문화축제</h2>
-
-            <div class="slider-image">
-              <img src="images/summercamp2025.JPG" alt="Summer Festival Preview">
-            </div>
-            <p>
-                아이들이 예술과 공예, 수학, 영어를 재미있게 배우며 성장할 수 있는 특별한 기회를 제공합니다. 창의력과 학습 능력을 동시에 키울 수 있는 다양한 활동들이 준비되어 있으며, 지역 커뮤니티와 함께하는 뜻깊은 여름을 만들어드립니다.
-            </p>
-            <a href="announcement.html" class="slider-link">자세히 보기</a>
-          </div>
-        </div>
-  
-        <!-- Slide 2 -->
-        <div class="slider-box">
-          <div class="slider-content">
-            <h2 class="text-effect">오케스트라 정기 정기연주회</h2>
-            <div class="slider-image">
-              <img src="images/orchestra05-23-25.JPG" alt="Sejong Korean Class">
-            </div>
-            <p>
-                한인문화재단 소속 세종 오케스트라가 전통과 현대를 아우르는 다채로운 클래식 음악으로 정기 연주회를 엽니다. 음악감독 이윤주 지휘 아래 열리는 이번 공연에 많은 관심 부탁드립니다!
-            </p>
-            <a href="programs.html" class="slider-link">자세히 보기</a>
-          </div>
-        </div>
-
-        <div class="slider-box">
-            <div class="slider-content">
-              <h2 class="text-effect">추억 속으로 떠나는 여행</h2>
-              <div class="slider-image">
-                <img src="images/memory-choir.JPG" alt="Orchestra Concert Poster">
-              </div>
-              <p>세종 어린이 & 여성 합창단이 ‘추억’을 주제로 한 따뜻한 하모니로 여러분을 찾아갑니다. 감성 가득한 무대를 통해 함께 추억 속 여행을 떠나보세요!</p>
-              <a href="announcement.html" class="slider-link">자세히 보기</a>
-            </div>
-          </div>
-          
-  
-        <!-- Add more slider-box divs as needed -->
-  
-      </div>
-    </div>
-  </section>
-  
-  
-        <div class="slider-controls">
-            <button id="prev">&larr;</button>
-            <span>
-              <strong id="slide-number" style="color: black;">01</strong>
-              <span style="color: #999;">/03</span>
-            </span>
-            <button id="next">&rarr;</button>
-            <span class="pause-icon" id="pause-toggle">
-                <img id="pause-icon-img" src="images/pause-button.jpg" alt="Pause" class="pause-img"/>
-            </span>
-          </div>
-          
-          
-
-      
-  </section>
-
-  <script>
-  const slides = document.querySelectorAll('.slider-box');
-  const slideWrapper = document.querySelector('.slider-boxes');
-  const slideNumber = document.getElementById('slide-number');
-  const nextBtn = document.getElementById('next');
-  const prevBtn = document.getElementById('prev');
-
-  let current = 0;
-  const totalSlides = slides.length;
-
-  function updateSlide(index) {
-    slideWrapper.style.transform = `translateX(-${index * 100}%)`;
-    slideNumber.textContent = String(index + 1).padStart(2, '0');
-  }
-
-  // Button Controls
-  nextBtn.addEventListener('click', () => {
-    if (current < totalSlides - 1) {
-      current++;
-      updateSlide(current);
-    }
-  });
-
-  prevBtn.addEventListener('click', () => {
-    if (current > 0) {
-      current--;
-      updateSlide(current);
-    }
-  });
-
-  // Swipe Controls
-  let startX = 0;
-  let endX = 0;
-
-  slideWrapper.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-  slideWrapper.addEventListener('touchend', (e) => {
-    endX = e.changedTouches[0].clientX;
-    const diff = startX - endX;
-
-    if (Math.abs(diff) > 50) {
-      if (diff > 0 && current < totalSlides - 1) {
-        current++;
-      } else if (diff < 0 && current > 0) {
-        current--;
-      }
-      updateSlide(current);
-    }
-  });
-
-  // Initial state
+nextBtn.addEventListener('click', () => {
+  current = (current + 1) % slides.length;
   updateSlide(current);
-  // Optional: handle window resizing (in case slides resize)
-  window.addEventListener('resize', () => updateSlide(current));
-////////////////////////////////////////////////////////////
-    // menu toggle
-    function toggleMobileMenu() {
-    const menu = document.querySelector('.nav-menu');
-    const hamburger = document.querySelector('.hamburger');
-    menu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-  }
-
-  // Optional: Toggle dropdowns on click (for mobile only)
-  document.querySelectorAll('.dropdown > a').forEach(link => {
-    link.addEventListener('click', function (e) {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        const parent = this.parentElement;
-        parent.classList.toggle('open');
-      }
-    });
-  });
-
-let autoSlideInterval;
-let isPaused = false;
-
-const pauseBtn = document.getElementById('pause-toggle');
-const pauseIcon = document.getElementById('pause-icon-img');
-
-function startAutoSlide() {
-  autoSlideInterval = setInterval(() => {
-    current = (current + 1) % totalSlides;
-    updateSlide(current);
-  }, 8000);
-}
-
-function stopAutoSlide() {
-  clearInterval(autoSlideInterval);
-}
-
-// Start auto slide on load
-startAutoSlide();
-
-pauseBtn.addEventListener('click', () => {
-  if (isPaused) {
-    startAutoSlide();
-    pauseIcon.src = "images/pause-button.jpg";  // <-- Reset to pause icon
-  } else {
-    stopAutoSlide();
-    pauseIcon.src = "images/play-button.jpg";   // <-- Set to play icon
-  }
-  isPaused = !isPaused;
 });
 
+prevBtn.addEventListener('click', () => {
+  current = (current - 1 + slides.length) % slides.length;
+  updateSlide(current);
+});
 
-  </script>
+updateSlide(current); // initial call
+});
+/////// pause button
+const pauseImg = document.getElementById('pause-icon-img');
+let isPaused = false;
+
+document.getElementById('pause-toggle').addEventListener('click', () => {
+  isPaused = !isPaused;
+  pauseImg.src = isPaused ? 'images/play-icon.png' : 'images/pause-icon.png';
+});
+
   
-</body>
-</html>
