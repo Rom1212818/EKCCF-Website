@@ -1,0 +1,311 @@
+/* Reset and base setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: white;
+}
+
+/* Top header bar */
+.top-header {
+  background-color: #222121e0;
+  color: white;
+  padding: 0.85em 1.5em;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.top-right-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.language-switcher button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.language-switcher button:hover {
+  text-decoration: underline;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 0.2em 0.6em;
+  max-width: 220px;
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.3em;
+  flex: 1;
+  border-radius: 999px;
+}
+
+.search-bar::after {
+  content: "\1F50D"; /* magnifying glass unicode */
+  font-size: 1rem;
+  margin-left: 0.5em;
+  color: black;
+}
+
+/* Navigation bar */
+header {
+  margin-top: 40px; /* moved navbar even lower */
+}
+
+.navbar {
+  background-color: white;
+  border-bottom: 0px solid #ddd;
+  padding: 0.8em 0;
+  box-shadow: 0 0px 0px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-branding {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.nav-branding img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-text {
+  font-size: 1.45rem;
+  font-weight: bold;
+  color: black;
+  white-space: nowrap;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu > li > a {
+  text-decoration: none;
+  color: #222;
+  font-size: 1.15rem;
+  font-weight: 500;
+  padding: 0.5em;
+}
+
+.nav-menu > li > a:hover {
+  color: #007acc;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  list-style: none;
+  border: 1px solid #ddd;
+  min-width: 160px;
+  z-index: 100;
+}
+
+.dropdown-menu li a {
+  padding: 0.5em 1em;
+  display: block;
+  font-size: 0.9rem;
+  color: #222;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f7f7f7;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Hero/Slider section */
+.hero-slider {
+  position: relative;
+  max-width: 1600px;
+  margin: 15px auto; /* moved up slightly */
+  padding: 0 20px;
+}
+
+.hero-slider-active {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-boxes {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  width: 100%;
+}
+
+.slider-box {
+  background: rgb(226, 181, 98);
+  background-image: url('images/texture.jpg'); /* add your subtle texture file */
+  background-repeat: repeat;
+  background-size: cover; /* or 'contain' for SVG */
+  background-blend-mode: multiply; /* helps blend with color */
+  padding: 3rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  min-height: 500px;
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.slider-content {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.slider-image {
+  flex: 0 0 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.slider-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.slider-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #10348f;
+}
+
+.slider-box p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.slider-link {
+  position: absolute;
+  bottom: -16rem;
+  left: 0;
+  display: inline-block;
+  background-color: #111;
+  color: white;
+  padding: 1em 2em;
+  text-decoration: none;
+  font-size: 1rem; /* fixed typo from '1rems' */
+  border-radius: 4px;
+  width: fit-content;
+  max-width: 200px;
+}
+
+.slider-controls {
+  display: flex;
+  justify-content: flex-start; /* Aligns contents to the left */
+  align-items: center;
+  gap: 1.5em;
+  font-family: 'Noto Sans KR', sans-serif;
+  margin: 2rem 0 0 3rem; /* Add left margin to create spacing from page edge */
+  font-size: 1.6rem;
+  color: #999;
+}
+
+
+.slider-controls button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.slider-controls button:hover {
+  color: #333;
+}
+
+.slider-controls .pause-icon {
+  border-left: 1px solid #ccc;
+  padding-left: 1rem;
+  margin-left: 1rem;
+}
+
+/* Utility */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+}

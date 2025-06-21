@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>에드먼튼 한인문화재단</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="top-header">
+        <div class="logo-text"></div>
+      
+        <div class="top-right-group">
+          <div class="language-switcher">
+            <button>한국어</button>
+            <button>English</button>
+          </div>
+          <div class="search-bar">
+            <input type="text" placeholder="검색..." />
+          </div>
+        </div>
+      </div>
+      
+      
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <!-- Left: Logo and EKCCF -->
+        <div class="nav-left">
+          <a href="index.html" class="nav-branding">
+            <img src="images/logo3.png" alt="EKCCF 로고" />
+            <span class="nav-text">에드먼튼 한인문화재단</span>
+          </a>
+        </div>
+
+        <!-- Center: Navigation menu -->
+        <ul class="nav-menu">
+          <li class="dropdown">
+            <a href="about.html">재단소개</a>
+            <ul class="dropdown-menu">
+              <li><a href="history.html">역사</a></li>
+              <li><a href="organization.html">조직도</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="culture.html">세종문화원</a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">프로그램</a></li>
+              <li><a href="facility.html">시설 안내</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="orchestra.html">세종오케스트라</a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">정기공연</a></li>
+              <li><a href="orchestra-members.html">단원</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="choir.html">세종합창단</a>
+            <ul class="dropdown-menu">
+              <li><a href="children-choir.html">어린이 합창단</a></li>
+              <li><a href="mothers-choir.html">어머니 합창단</a></li>
+            </ul>
+          </li>
+          <li><a href="inquiry.html">문의</a></li>
+          <li><a href="announcement.html">공지사항</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Slider Section -->
+  <section class="hero-slider">
+    <div class="hero-slider-active">
+        <div class="slider-boxes">
+          <!-- Slide 1 -->
+          <div class="slider-box active">
+            <!-- 35% text -->
+            <div class="slider-content">
+              <h2>《EKCCF 여름문화축제》 행사안내</h2>
+              <p>
+                2025년 7월, 에드먼튼 한인문화재단에서 열리는 여름 문화축제에서는
+                다양한 공연, 예술 전시, 한식 체험과 함께 지역 커뮤니티를 위한
+                프로그램이 진행됩니다. 많은 관심과 참여 바랍니다.
+              </p>
+              <a href="announcement.html" class="slider-link">자세히 보기</a>
+            </div>
+      
+            <!-- 65% image -->
+            <div class="slider-image">
+              <img src="images/background.jpg" alt="Summer Festival Preview">
+            </div>
+          </div>
+      
+          <!-- Slide 2 -->
+          <div class="slider-box">
+            <div class="slider-content">
+              <h2>《세종문화원》 한국어 교육 안내</h2>
+              <p>
+                초급부터 고급까지 다양한 한국어 수업이 제공됩니다. 문화와 함께 배우는
+                한국어 교육에 지금 등록해보세요!
+              </p>
+              <a href="programs.html" class="slider-link">자세히 보기</a>
+            </div>
+            <div class="slider-image">
+              <img src="images/background1.jpeg" alt="Sejong Korean Class">
+            </div>
+          </div>
+      
+          <!-- Add more slider-box divs as needed -->
+        </div>
+      
+      
+  
+        <div class="slider-controls">
+            <button id="prev">&larr;</button>
+            <span>
+              <strong id="slide-number" style="color: black;">01</strong>
+              <span style="color: #999;">/05</span>
+            </span>
+            <button id="next">&rarr;</button>
+            <span class="pause-icon">⏸</span>
+          </div>
+          
+          
+
+      
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll('.slider-box');
+    const nextBtn = document.getElementById('next');
+    const prevBtn = document.getElementById('prev');
+    const slideNumber = document.getElementById('slide-number');
+    let current = 0;
+  
+    function updateSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active'); // hide all
+      });
+      slides[index].classList.add('active'); // show current
+  
+      // Update slide number with leading 0
+      slideNumber.textContent = String(index + 1).padStart(2, '0');
+    }
+  
+    nextBtn.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      updateSlide(current);
+    });
+  
+    prevBtn.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      updateSlide(current);
+    });
+  
+    // Initial display
+    updateSlide(current);
+  </script>
+  
+  
+
+  
+  
+
+</body>
+</html>
