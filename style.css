@@ -319,7 +319,9 @@ header {
   cursor: pointer;
 }
 
-/* Mobile styles only */
+/* Mobile */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 @media (max-width: 768px) {
   .nav-left {
     display: flex;
@@ -388,15 +390,10 @@ header {
   .nav-menu.active {
     right: 0;
   }
-  
-
 
   .nav-text {
     margin-top: 0px;
   }
-
-  
-
   .nav-menu li {
     margin-bottom: 1rem;
   }
@@ -525,7 +522,63 @@ header {
     position: static; /* critical */
     margin-top: 1rem;
   }
-  
+  /* Base structure */
+/*--------------------------------------------------Orchestra members------------------------------------------------------------- */
+section {
+  padding: 1.5rem;
+}
+
+.orchestra-intro h2,
+.executive-members h3,
+.orchestra-members h3 {
+  font-size: 1.4rem;
+  color: #10348f;
+  margin-bottom: 1rem;
+}
+
+.orchestra-intro p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.member-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+}
+
+.member-info h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.member-info p {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0.2rem 0 0;
+}
+
+/* Orchestra member grid layout */
+.member-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
   
   
 }
