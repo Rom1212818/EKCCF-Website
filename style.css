@@ -15,9 +15,9 @@ body, html {
   background-color: white;
 }
 
-/* Top header bar */
+/* Top header bar(Language and search bar) */
 .top-header {
-  background-color: rgb(226, 181, 98);
+  background-color: rgb(255, 255, 255);
   color: white;
   padding: 0.85em 1.5em;
   font-size: 0.9rem;
@@ -41,7 +41,7 @@ body, html {
 .language-switcher button {
   background: none;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 0.9rem;
   cursor: pointer;
 }
@@ -73,14 +73,16 @@ body, html {
 
 /* Navigation bar */
 header {
-  margin-top: 40px; /* moved navbar even lower */
+  margin-top: 0; /* moved navbar even lower */
 }
 
 .navbar {
-  background-color: white;
+  background-color: rgb(223, 190, 115);
   border-bottom: 0px solid #ddd;
   padding: 0.8em 0;
-  box-shadow: 0 0px 0px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  width: 100%;
+  min-height: 30px; /* ensures background fills vertically */
 }
 
 .nav-container {
@@ -318,7 +320,6 @@ header {
   font-size: 2rem;
   cursor: pointer;
 }
-
 /* Mobile */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -328,10 +329,14 @@ header {
     justify-content: space-between; /* Push hamburger to the right */
     align-items: center;
     width: 100%;
-    margin-top: -50px;
+    position: relative;
+  
   }
   .nav-branding {
-    padding-top: 0.3rem;
+    display: flex;
+    align-items:center;
+    gap: 10px;
+
   }
 
   .nav-container {
@@ -340,15 +345,17 @@ header {
 
   .hamburger {
     display: flex;
+    font-size:2rem;
+    line-height:1;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     width: 30px;
-    height: 24px;
+    height: 30px;
     cursor: pointer;
-    z-index: 1100; /* must be higher than nav-menu */
-    position: absolute;
-    top:4rem;
-    right:1.5rem;
+    position: relative;
+    margin-left:auto;
+    /*cursor: pointer;*/
   }
   
   .hamburger span {
@@ -393,18 +400,20 @@ header {
 
   .nav-text {
     margin-top: 0px;
+    font-size:1.1rem;
+    font-weight: bold;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+  }
+  .nav-branding img {   /* Logo for mobile */
+    height: 40px;                
+    width: auto;
   }
   .nav-menu li {
     margin-bottom: 1rem;
   }
 
-  .nav-left {
-    flex-grow: 1;
-  }
-
-  .nav-text {
-    font-size: 1.2rem;
-  }
 
 /* Base submenu styling */
   .nav-menu .dropdown {
@@ -527,38 +536,98 @@ header {
 section {
   padding: 1.5rem;
 }
+.orchestra-intro {
+  background-image: url('images/orchestrabackground2.png'); /* Update with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  color: white; /* Optional: ensures text is readable */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional: adds contrast */
+  border-radius: 0px;  /*rounded corners*/
+}
 
-.orchestra-intro h2,
-.executive-members h3,
-.orchestra-members h3 {
-  font-size: 1.4rem;
-  color: #10348f;
-  margin-bottom: 1rem;
+
+.orchestra-intro h2 {
+  color: white;
+  font-size:1.5rem;
 }
 
 .orchestra-intro p {
-  font-size: 1rem;
-  color: #444;
+  font-size: 0.9rem;
+  color: #ffffff;
   line-height: 1.5;
 }
+.executive-members h3,
+.orchestra-members h3 {
+  font-size: 1.4rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.orchestra-filter {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+}
+.tab {
+  background: none;
+  border: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  color: black
+}
+
+.tab.active {
+  color: darkred;
+  border-bottom: 2px solid darkred;
+}
+
+.orchestra-members .member-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
 
 .member-card {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.2rem;
   background-color: #f9f9f9;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
+.member-card.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
 .member-card img {
   width: 70px;
   height: 70px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+  margin-right: 1rem;
 }
 
 .member-info h4 {
@@ -577,6 +646,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
 }
 
   
