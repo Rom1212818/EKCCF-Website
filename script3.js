@@ -99,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (menu && hamburger) {
       menu.classList.toggle('active');
       hamburger.classList.toggle('active');
+
+      hamburger.textContent = hamburger.classList.contains('active') ? '✖' : '☰';
     }
   };
 
@@ -145,5 +147,29 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-  
+
+  // =========== Language Switch ========
+  const setLanguage = (lang) => {
+    localStorage.setItem('language', lang);
+
+    if (lang === 'en') {
+      document.querySelectorAll('.lang-ko').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = '');
+    } else {
+      document.querySelectorAll('.lang-ko').forEach(el => el.style.display = '');
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+    }
+  };
+
+  // Event listeners for buttons
+  const langButtons = document.querySelectorAll('.language-switcher button');
+  if (langButtons.length >= 2) {
+    langButtons[0].addEventListener('click', () => setLanguage('ko')); // 한국어
+    langButtons[1].addEventListener('click', () => setLanguage('en')); // English
+  }
+
+  // Apply saved language preference on page load
+  const savedLang = localStorage.getItem('language') || 'ko';
+  setLanguage(savedLang);
+
 });
