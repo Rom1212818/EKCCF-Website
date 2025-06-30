@@ -324,6 +324,10 @@ header {
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 @media (max-width: 768px) {
+  .lang-ko, .lang-en {
+    transition: opacity 0.3s ease;
+  }
+  
   .nav-left {
     display: flex;
     justify-content: space-between; /* Push hamburger to the right */
@@ -355,11 +359,13 @@ header {
     cursor: pointer;
     position: relative;
     margin-left:auto;
-    /*cursor: pointer;*/
+    cursor: pointer;
+    z-index: 1100;
   }
   
   .hamburger span {
     height: 3px;
+    display: block;
     background: #000;
     border-radius: 2px;
     transition: 0.4s ease;
