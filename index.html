@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 
 <head>
   <meta charset="UTF-8" />
@@ -14,27 +14,24 @@
 </head>
 <body>
     
-      
-      
-  <header>
-    <nav class="navbar">
-      <div class="nav-container">
-        <!-- Left: Logo and EKCCF -->
-        <div class="nav-left">
-          <a href="index.html" class="nav-branding">
-            <img src="images/logo3.png" alt="EKCCF 로고" />
-            <span class="nav-text">
-                <span class="lang-ko">에드먼튼 한인문화재단</span>
-                <span class="lang-en" style="display: none;">EKCCF</span>
-              </span>
-              
-          </a>
-          <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
         </div>
-        
-
-        <!-- Center: Navigation menu -->
-      <!-- Center: Navigation menu -->
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
     <ul class="nav-menu">
         <li class="dropdown">
         <a href="about.html">
@@ -114,181 +111,144 @@
         <span class="lang-en" style="display: none;">Announcements</span>
         </a></li>
     </ul>
-  
-
-      </div>
-    </nav>
   </header>
 
-    <div class="top-header">
-            <div class="logo-text"></div>
-        
-            <div class="top-right-group">
-            <div class="language-switcher">
-                <button>한국어</button>
-                <button>English</button>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="검색..." />
-            </div>
-            </div>
-        </div>
-
-  <!-- Hero Slider Section -->
-  <section class="hero-slider">
-    <div class="hero-slider-active">
-      <div class="slider-boxes">
-  
-        <!-- Slide 1 -->
-        <div class="slider-box active">
-          <div class="slider-content">
-            <h2 class="text-effect">
-                <span class="lang-ko">EKCCF 여름문화축제</span>
-                <span class="lang-en" style="display: none;" > EKCCF Summercamp</span>
-            
-            </h2>
-
-            <div class="slider-image">
-              <img src="images/summercamp2025.JPG" alt="Summer Festival Preview">
-            </div>
-            <p>
-                <span class="lang-ko">아이들이 예술과 공예, 수학, 영어를 재미있게 배우며 성장할 수 있는 특별한 기회를 제공합니다. 창의력과 학습 능력을 동시에 키울 수 있는 다양한 활동들이 준비되어 있으며, 지역 커뮤니티와 함께하는 뜻깊은 여름을 만들어드립니다.</span>
-                <span class="lang-en" style="display: none;"> A special opportunity for children to grow and develop their creativity and learning abilities</span>
-            </p>
-            <a href="programs.html" class="slider-link">
-                <span class="lang-ko">자세히 보기</span>
-                <span class="lang-en" style="display: none;">Learn More</span>
-              </a>
-              
-          </div>
-        </div>
-  
-        <!-- Slide 2 -->
-        <div class="slider-box">
-          <div class="slider-content">
-            <h2 class="text-effect">
-                <span class="lang-ko">세종오케스트라 연주회</span>
-                <span class="lang-en" style="display: none;" > Sejong Orchestra Concert</span>
-            
-            </h2>
-            <div class="slider-image">
-              <img src="images/Orchestra1.JPG" alt="Sejong Korean Class">
-            </div>
-            <p>
-                <span class="lang-ko">한인문화재단 소속 세종 오케스트라가 전통과 현대를 아우르는 다채로운 클래식 음악으로 정기 연주회를 엽니다. 음악감독 이윤주 지휘 아래 열리는 이번 공연에 많은 관심 부탁드립니다!</span>
-                <span class="lang-en" style="display: none;">The Sejong Orchestra, affiliated with the Korean Cultural Foundation, will hold regular concerts featuring a variety of classical music spanning both tradition and modernity. We ask for your interest in this performance, which will be conducted by music director Lee Yoon-joo!</span>
-                
-            </p>
-            <a href="programs.html" class="slider-link">
-                <span class="lang-ko">자세히 보기</span>
-                <span class="lang-en" style="display: none;">Learn More</span>
-              </a>
-              
-          </div>
-        </div>
-
-        <div class="slider-box">
-            <div class="slider-content">
-              <h2 class="text-effect">
-                <span class="lang-ko">추억 속으로 떠나는 여행</span>
-                <span class="lang-en" style="display: none;" > Journey through our memories</span>
-                </h2>
-              <div class="slider-image">
-                <img src="images/MemoryChoir.JPG" alt="Orchestra Concert Poster">
-              </div>
-              <p>
-                <span class="lang-ko">세종 어린이 & 여성 합창단이 ‘추억’을 주제로 한 따뜻한 하모니로 여러분을 찾아갑니다. 감성 가득한 무대를 통해 함께 추억 속 여행을 떠나보세요!</span>
-                <span class="lang-en" style="display: none;">Sejong Children's & Women's Choir will meet you with warm harmony on the theme of 'memory'. Let's go on a journey down memory lane together through a stage full of emotions!</span>
-                </p>
-                <a href="programs.html" class="slider-link">
-                    <span class="lang-ko">자세히 보기</span>
-                    <span class="lang-en" style="display: none;">Learn More</span>
-                  </a>
-                  
-            </div>
-          </div>
-          
-  
-        <!-- Add more slider-box divs as needed -->
-  
-      </div>
-    </div>
-  </section>
-  
-  
-        <div class="slider-controls">
-            <button id="prev">&larr;</button>
-            <span>
-              <strong id="slide-number" style="color: black;">01</strong>
-              <span style="color: #999;">/03</span>
-            </span>
-            <button id="next">&rarr;</button>
-            <span class="pause-icon" id="pause-toggle">
-                <img id="pause-icon-img" src="images/pause-button.jpg" alt="Pause" class="pause-img"/>
-            </span>
-          </div>
-          
-          
-
+  <main> 
+    <section class="intro-section">
+        <div class="intro-content">
+          <h1>에드먼튼 한인문화재단에
+          <br><strong>오신 것을 환영합니다!</strong></h1>
       
-  </section>
-  <section class="president-message">
-    <div class="container">
-      <div class="message-header">
-        <h2>
-          <span class="lang-ko">취임사</span>
-          <span class="lang-en" style="display: none;">Message from the President</span>
-        </h2>
-        <p>
-          <span class="lang-ko">취임사</span>
-          <span class="lang-en" style="display: none;">Inaugural Address</span>
-        </p>
-        <div class="underline"></div>
+          <div class="search-bar">
+            <input type="text" placeholder="찾으시는 정보 또는 서비스를 입력하세요" />
+            <button class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+    <section class="custom-slider">
+        <div class="slider-wrapper">
+          <div class="slider-track">
+            <img src="images/sample1.png" class="slide" alt="Slide 1">
+            <img src="images/background2.png" class="slide" alt="Slide 2">
+            <img src="images/slide3.png" class="slide" alt="Slide 3">
+          </div>
+          
+        </div>
+      </section>
+        <div class="icon-grid">
+        <a href="about.html" class="icon-card">
+          <img src="images/about2.png" alt="재단소개 아이콘" />
+          <p>재단소개</p>
+        </a>
+        <a href="facility.html" class="icon-card">
+          <img src="images/facility2.png" alt="시설 안내 아이콘" />
+          <p>시설 안내</p>
+        </a>
+        <a href="organization.html" class="icon-card">
+          <img src="images/organization2.png" alt="조직도 아이콘" />
+          <p>조직도</p>
+        </a>
+        <a href="calendar.html" class="icon-card">
+          <img src="images/calendar2.png" alt="달력 아이콘" />
+          <p>달력</p>
+        </a>
+        <a href="inquiry.html" class="icon-card">
+          <img src="images/inquiry2.png" alt="문의 아이콘" />
+          <p>문의</p>
+        </a>
+        <a href="announcement.html" class="icon-card">
+          <img src="images/announcement2.png" alt="인스타 아이콘" />
+          <p>공지사항</p>
+        </a>
+        <a href="programs.html" class="icon-card">
+            <img src="images/program2.png" alt="인스타 아이콘" />
+            <p>프로그램</p>
+        </a>
+        <a href="orchestra-members.html" class="icon-card">
+            <img src="images/orchestra2.png" alt="인스타 아이콘" />
+            <p>오케스트라</p>
+        </a>
+        <a href="choir.html" class="icon-card">
+            <img src="images/choir2.png" alt="인스타 아이콘" />
+            <p>합창단</p>
+        </a>
+    </div>
+      </section>
+
+     
+      
+      
+    
+      
+      
+    <section class="title-section">
+      <h2>프로그램 즐겨보기</h2>
+    </section>
+
+    <section class="filter-tabs">
+      <button class="tab-btn active" data-filter="all">전체</button>
+      <button class="tab-btn" data-filter="workshops">세종문화원</button>
+      <button class="tab-btn" data-filter="performances">세종오케스트라</button>
+      <button class="tab-btn" data-filter="classes">세종합창단</button>
+    </section>
+
+    <section class="events-container">
+      <div class="event-card" data-category="workshops">
+        <div class="card-title">Summer Camp</div>
+        <img src="images/summercamp2025.JPG" alt="Event 1 Poster">
       </div>
-  
-      <div class="message-card">
-        <div class="president-info">
-          <img src="images/president.jpg" alt="President Photo" class="president-photo" />
-          <h3>
-            <span class="lang-ko">조순익 이사장</span>
-            <span class="lang-en" style="display: none;">Chairman Soonik Cho</span>
-          </h3>
-          <p class="subtitle">
-            <span class="lang-ko">에드몬톤 세종문화재단</span>
-            <span class="lang-en" style="display: none;">Edmonton Sejong Cultural Foundation</span>
-          </p>
-        </div>
-  
-        <div class="message-content">
-          <p>
-            <span class="lang-ko">존경하는 에드몬톤 교민여러분,저는 이 자리를 빌어 제 8대 에드몬톤 세종문화재단 이사장으로 취임하게 된 것을 진심으로 기쁘게 생각합니다. 저에게 주어진 이 소중한 책임을 무겁게 느끼며 ,앞으로의 여정에서 투명성,실현 가능성,그리고 미래 지향성을 기반으로 한국 문화 발전에 최선을 다할 것을 다짐합니다. </span>
-            <span class="lang-en" style="display: none;">Dear members of the Edmonton Korean community, I am truly honored to be inaugurated as the 8th Chairman of the Edmonton Sejong Cultural Foundation. I take this responsibility seriously and promise to uphold transparency, feasibility, and forward-thinking in promoting Korean culture.</span>
-          </p>
-          <p>
-            <span class="lang-ko">첫째, 투명성입니다.문화는 공동체의 자산입니다. 따라서 우리 문화재단의 모든 활동과 결정은 투명하게 공개되어야 한다고 믿습니다. 우리는 지역 주민과의 소통을 강화하고,의견을 경청하며 문화 예산과 프로그램 운영에 대한 정보를 투명하게 제공함으로써  신뢰받는 조직으로 거듭나겠습니다. 이를 통해 여러분의 목소리가 문화 정책에 실질적으로 반영될 수 있도록 하겠습니다. </span>
-            <span class="lang-en" style="display: none;">First, transparency. Culture is a communal asset, and all activities and decisions of our foundation should be open and transparent. We will enhance communication, listen to opinions, and share information about cultural budgets and operations to become a trusted organization. This will ensure your voices are reflected in cultural policy.</span>
-          </p>
-          <p>
-            <span class="lang-ko">둘째, 정책의 실현 가능성입니다. 이러한 비전이 단순한 구호에 그치지 않도록 구체적인 실행 계획을 마련하겠습니다. 우리의 목표는 문화예술 프로그램을 통해 지역사회의 삶의 질을 향상시키고,다양한 문화적 욕구를 충족하는 것입니다. 이를 위해 지역 예술가 혹은 한국의 전문 문화단체와의 협력 관계를 강화하고,실질적인 프로그램과 프로젝트를 통해 문화 행사의 기회를 확대해 나가겠습니다. </span>
-            <span class="lang-en" style="display: none;">Second, feasibility. We will create detailed plans so that our vision is not just words. Our goal is to improve quality of life through arts programs and meet diverse cultural needs. We will strengthen partnerships with local and Korean cultural groups to offer meaningful programs and events.</span>
-          </p>
-          <p>
-            <span class="lang-ko">셋째,미래 지향성입니다.변화하는 시대에 발맞춰 우리의 문화도 지속적으로 발전해야 합니다. 우리는 디지털 시대의 흐름을 반영하여 새로운 플랫폼을 통해 더 많은 사람둘의 문화를 경험할 수 있도록 하겠습니다. 또한 차세대 문화 인재를 양성하고,다양한 세대가 함께 참여할 수 있는 프로그램을 마련하여 ,미래의 문화가 더욱 풍요롭고 다양해질 수 있도록 힘쓰겠습니다. </span>
-            <span class="lang-en" style="display: none;">Third, forward-thinking. Culture must evolve with changing times. We will embrace digital platforms to reach broader audiences and nurture the next generation of cultural leaders. We'll also develop intergenerational programs to ensure our cultural future is rich and diverse.</span>
-          </p>
-          <p>
-            <span class="lang-ko">끝으로 ,여러분이 함께하는 문화 공감의 장을 만들어 나가겠습니다. 여러분의 협력과 참여가  그 어떤 것보다 소중합니다. 함께 더 나은 문화의 미래를 만들어 나갑시다 .여러분의 많은 관심과 성원을 부탁드립니다. 감사합니다.</span>
-            <span class="lang-en" style="display: none;">Finally, let us create a shared cultural experience. Your support and participation are the most valuable. Let’s build a better cultural future together. I deeply appreciate your continued interest and encouragement.</span>
-          </p>
-          <p class="signature">
-            <span class="lang-ko"><strong>조순익 배상</strong><br>에드몬톤 세종문화재단 이사장</span>
-            <span class="lang-en" style="display: none;"><strong>Soonik Cho</strong><br>Chairman, Edmonton Sejong Cultural Foundation</span>
-          </p>
-        </div>
+      <div class="event-card" data-category="performances">
+        <div class="card-title">Orchestra</div>
+        <img src="images/Orchestra1.JPG" alt="Event 2 Poster">
+      </div>
+      <div class="event-card" data-category="classes">
+        <div class="card-title">Choir</div>
+        <img src="images/MemoryChoir.JPG" alt="Event 3 Poster">
+      </div>
+      <div class="event-card" data-category="workshops">
+        <div class="card-title">Summer Camp</div>
+        <img src="images/summercamp2025.JPG" alt="Event 4 Poster">
+      </div>
+       <div class="event-card" data-category="classes">
+        <div class="card-title">Choir</div>
+        <img src="images/MemoryChoir.JPG" alt="Event 5 Poster">
+      </div>
+    </section>
+
+    <!-- Custom Scrollbar -->
+    <div class="custom-scrollbar-container">
+      <div class="custom-scrollbar-track">
+        <div class="custom-scrollbar-thumb"></div>
       </div>
     </div>
-  </section>
-  
+ 
+    <div class="announcement-header">
+        <h2 class="announcement-heading">공지사항</h2>
+        <a href="/announcements.html" class="announcement-link">+</a>
+      </div>
+      
+      <hr class="section-divider">
+      
+      <ul class="announcement-list">
+        <li>
+          <p class="title">[모집] 세종문화센터 여름 캠프 자원봉사자 모집 안내</p>
+          <span class="date">2025.07.14</span>
+        </li>
+        <li>
+          <p class="title">[공지] 8월 프로그램 일정 변경 안내</p>
+          <span class="date">2025.07.11</span>
+        </li>
+        <li>
+          <p class="title">[안내] 광복절 휴무 안내 (8월 15일)</p>
+          <span class="date">2025.07.11</span>
+        </li>
+        <li>
+          <p class="title">[신청] 어린이/어머니 합창단 신규 단원 모집</p>
+          <span class="date">2025.07.10</span>
+        </li>
+      </ul>
+      
 
   <section class="contact-section">
     <div class="container">
@@ -361,12 +321,8 @@
       </div>
     </div>
   </section>
-  
+  </main>
+
   <script src="script3.js"></script>
-
-
-  
-  
-
 </body>
 </html>
