@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>프로그램 | 세종문화원</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
+        <ul class="nav-menu">
+          <li class="dropdown">
+            <a href="about.html">
+              <span class="lang-ko">재단소개</span>
+              <span class="lang-en" style="display: none;">About Us</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="history.html">
+                <span class="lang-ko">역사</span>
+                <span class="lang-en" style="display: none;">History</span>
+              </a></li>
+              <li><a href="organization.html">
+                <span class="lang-ko">조직도</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="culture.html">
+              <span class="lang-ko">세종문화원</span>
+              <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">
+                <span class="lang-ko">프로그램</span>
+                <span class="lang-en" style="display: none;">Programs</span>
+              </a></li>
+              <li><a href="facility.html">
+                <span class="lang-ko">시설 안내</span>
+                <span class="lang-en" style="display: none;">Facility</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="orchestra.html">
+              <span class="lang-ko">세종오케스트라</span>
+              <span class="lang-en" style="display: none;">Sejong Orchestra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">
+                <span class="lang-ko">정기공연</span>
+                <span class="lang-en" style="display: none;">Performances</span>
+              </a></li>
+              <li><a href="orchestra-members.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="choir.html">
+              <span class="lang-ko">세종합창단</span>
+              <span class="lang-en" style="display: none;">Sejong Choir</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="children-choir.html">
+                <span class="lang-ko">어린이 합창단</span>
+                <span class="lang-en" style="display: none;">Children’s Choir</span>
+              </a></li>
+              <li><a href="mothers-choir.html">
+                <span class="lang-ko">어머니 합창단</span>
+                <span class="lang-en" style="display: none;">Mothers’ Choir</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="inquiry.html">
+              <span class="lang-ko">문의</span>
+              <span class="lang-en" style="display: none;">Contact</span>
+            </a>
+          </li>
+      
+          <li>
+            <a href="announcement.html">
+              <span class="lang-ko">공지사항</span>
+              <span class="lang-en" style="display: none;">Announcements</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+  </header>
+  <section class="program-intro">
+    <div class="intro-content">
+      <h2>
+        <span class="lang-ko">프로그램 및 행사 소개</span>
+        <span class="lang-en" style="display: none;">Programs and Events Introduction</span>
+      </h2>
+      <p>
+        <span class="lang-ko">세종오케스트라 단원들이 빚어내는 멋지고 아름다운 하모니를 통해 봄의 소리를 들으며
+        평안함과 행복을 마음껏 느껴 보시기 바랍니다.</span>
+        <span class="lang-en" style="display: none;">Experience the beautiful harmony created by the Sejong Orchestra members and feel peace and happiness.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Programs & Events Section -->
+<section class="program-section">
+  <div class="text-center mb-8">
+    <h2 class="section-title"></h2>
+    <p class="section-subtitle">
+    <span class="lang-ko">프로그램 및 행사</span>
+    <span class="lang-en" style="display: none;">Programs & Events</span>
+</p>
+    <div class="underline"></div>
+  </div>
+
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="sectionA"><span class="lang-ko">섹션 A</span><span class="lang-en" style="display: none;">Section A</span></button>
+    <button class="tab-btn" data-tab="sectionB"><span class="lang-ko">섹션 B</span><span class="lang-en" style="display: none;">Section B</span></button>
+    <button class="tab-btn" data-tab="sectionC"><span class="lang-ko">섹션 C</span><span class="lang-en" style="display: none;">Section C</span></button>
+  </div>
+  <!-- Events Grid -->
+  <div class="events-grid" id="events-container">
+    <!-- Cards will be inserted here dynamically -->
+  </div>
+</section>
+
+   
+
+<!-- Event Modal -->
+<div id="event-modal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <button class="modal-close" onclick="hideEventModal()">✕</button>
+    <div class="modal-header">
+      <h2 id="modal-title"><span class="lang-ko">이벤트 제목</span><span class="lang-en" style="display: none;">Event Title</span></h2>
+      <p id="modal-subtitle" class="subtitle"><span class="lang-ko">부제목</span><span class="lang-en" style="display: none;">Subtitle</span></p>
+    </div>
+    <div class="modal-content-wrapper">
+        <div class="modal-body-container">
+            <div class="modal-image">
+                <img id="modal-image" src="" alt="Event Image">
+            </div>
+            <div class="modal-info">
+                <div class="modal-badges">
+                    <span id="modal-date"><i class="icon">📅</i></span>
+                    <span id="modal-time"><i class="icon">⏰</i></span>
+                    <span id="modal-location"><i class="icon">📍</i></span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="modal-description">
+          <div id="modal-description-text">Full description will appear here.</div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="script3.js"></script>
+</body>
+</html>

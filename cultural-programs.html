@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Programs & Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cultural-programs.css">
+</head>
+<body>
+
+<section class="programs-section">
+  <div class="section-header">
+    <h2>Programs & Events</h2>
+    <p>프로그램 및 행사</p>
+    <div class="underline"></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-button active" data-tab="current">Current</button>
+    <button class="tab-button" data-tab="upcoming">Upcoming</button>
+    <button class="tab-button" data-tab="past">Past</button>
+  </div>
+
+  <div class="events-grid" id="events-container">
+    <!-- Event cards will be injected by JavaScript -->
+  </div>
+
+  <div class="modal" id="event-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="close-modal">✕</button>
+      <img id="modal-image" src="" alt="Event image">
+      <div class="modal-body">
+        <h3 id="modal-title"></h3>
+        <p id="modal-title-ko" class="text-red"></p>
+        <div class="modal-info">
+          <p><strong>Date:</strong> <span id="modal-date"></span></p>
+          <p><strong>Time:</strong> <span id="modal-time"></span></p>
+          <p><strong>Location:</strong> <span id="modal-location"></span></p>
+          <p><strong>Capacity:</strong> <span id="modal-capacity"></span></p>
+        </div>
+        <div class="modal-description">
+          <h4>Event Details</h4>
+          <p id="modal-description-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="cultural-programs.js"></script>
+</body>
+</html>

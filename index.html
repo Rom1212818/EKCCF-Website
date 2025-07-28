@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>에드먼튼 한인문화재단</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body>   
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
+        <ul class="nav-menu">
+          <li class="dropdown">
+            <a href="about.html">
+              <span class="lang-ko">재단소개</span>
+              <span class="lang-en" style="display: none;">About Us</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="history.html">
+                <span class="lang-ko">역사</span>
+                <span class="lang-en" style="display: none;">History</span>
+              </a></li>
+              <li><a href="organization.html">
+                <span class="lang-ko">조직도</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="culture.html">
+              <span class="lang-ko">세종문화원</span>
+              <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">
+                <span class="lang-ko">프로그램</span>
+                <span class="lang-en" style="display: none;">Programs</span>
+              </a></li>
+              <li><a href="facility.html">
+                <span class="lang-ko">시설 안내</span>
+                <span class="lang-en" style="display: none;">Facility</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="orchestra.html">
+              <span class="lang-ko">세종오케스트라</span>
+              <span class="lang-en" style="display: none;">Sejong Orchestra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">
+                <span class="lang-ko">정기공연</span>
+                <span class="lang-en" style="display: none;">Performances</span>
+              </a></li>
+              <li><a href="orchestra-members.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="choir.html">
+              <span class="lang-ko">세종합창단</span>
+              <span class="lang-en" style="display: none;">Sejong Choir</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="children-choir.html">
+                <span class="lang-ko">어린이 합창단</span>
+                <span class="lang-en" style="display: none;">Children’s Choir</span>
+              </a></li>
+              <li><a href="mothers-choir.html">
+                <span class="lang-ko">어머니 합창단</span>
+                <span class="lang-en" style="display: none;">Mothers’ Choir</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="inquiry.html">
+              <span class="lang-ko">문의</span>
+              <span class="lang-en" style="display: none;">Contact</span>
+            </a>
+          </li>
+      
+          <li>
+            <a href="announcement.html">
+              <span class="lang-ko">공지사항</span>
+              <span class="lang-en" style="display: none;">Announcements</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+  </header>
+
+  <main> 
+    <section class="intro-section">
+        <div class="intro-content">
+          <h1><span class="lang-ko">에드먼튼 한인문화재단에</span><span class="lang-en" style="display: none;">To the Edmonton Korean Cultural Centre Foundation</span>
+          <br><strong><span class="lang-ko">오신 것을 환영합니다!</span><span class="lang-en" style="display: none;">Welcome!</span></strong></h1>
+      
+          <div class="search-bar">
+            <input type="text" placeholder="찾으시는 정보 또는 서비스를 입력하세요" />
+            <button class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+    <section class="custom-slider">
+        <div class="slider-wrapper">
+          <div class="slider-track">
+            <img src="images/sample3.png" class="slide" alt="Slide 3 (duplicate)">
+            <img src="images/sample1.png" class="slide" alt="Slide 1">
+            <img src="images/sample2.png" class="slide" alt="Slide 2">
+            <img src="images/sample3.png" class="slide" alt="Slide 3">
+            <img src="images/sample1.png" class="slide" alt="Slide 1 (duplicate)">
+          </div>
+          
+        </div>
+      </section>
+        <div class="icon-grid">
+        <a href="about.html" class="icon-card">
+          <img src="images/about2.png" alt="재단소개 아이콘" />
+          <p><span class="lang-ko">재단소개</span><span class="lang-en" style="display: none;">About Us</span></p>
+        </a>
+        <a href="facility.html" class="icon-card">
+          <img src="images/facility2.png" alt="시설 안내 아이콘" />
+          <p><span class="lang-ko">시설 안내</span><span class="lang-en" style="display: none;">Facility</span></p>
+        </a>
+        <a href="organization.html" class="icon-card">
+          <img src="images/organization2.png" alt="조직도 아이콘" />
+          <p><span class="lang-ko">조직도</span><span class="lang-en" style="display: none;">Organization</span></p>
+        </a>
+        <a href="calendar.html" class="icon-card">
+          <img src="images/calendar2.png" alt="달력 아이콘" />
+          <p><span class="lang-ko">달력</span><span class="lang-en" style="display: none;">Calendar</span></p>
+        </a>
+        <a href="inquiry.html" class="icon-card">
+          <img src="images/inquiry2.png" alt="문의 아이콘" />
+          <p><span class="lang-ko">문의</span><span class="lang-en" style="display: none;">Contact</span></p>
+        </a>
+        <a href="announcement.html" class="icon-card">
+          <img src="images/announcement2.png" alt="인스타 아이콘" />
+          <p><span class="lang-ko">공지사항</span><span class="lang-en" style="display: none;">Announcements</span></p>
+        </a>
+        <a href="programs.html" class="icon-card">
+            <img src="images/program2.png" alt="인스타 아이콘" />
+            <p><span class="lang-ko">프로그램</span><span class="lang-en" style="display: none;">Programs</span></p>
+        </a>
+        <a href="orchestra-members.html" class="icon-card">
+            <img src="images/orchestra2.png" alt="인스타 아이콘" />
+            <p><span class="lang-ko">오케스트라</span><span class="lang-en" style="display: none;">Orchestra</span></p>
+        </a>
+        <a href="choir.html" class="icon-card">
+            <img src="images/choir2.png" alt="인스타 아이콘" />
+            <p><span class="lang-ko">합창단</span><span class="lang-en" style="display: none;">Choir</span></p>
+        </a>
+    </div>
+      </section>
+
+      
+    <section class="title-section">
+      <h2><span class="lang-ko">프로그램</span><span class="lang-en" style="display: none;">Programs</span></h2>
+      <a href="/programs.html" class="announcement-link">+</a>
+    </section>
+
+    <section class="filter-tabs">
+      <button class="tab-btn active" data-filter="all"><span class="lang-ko">전체</span><span class="lang-en" style="display: none;">All</span></button>
+      <button class="tab-btn" data-filter="workshops"><span class="lang-ko">세종문화원</span><span class="lang-en" style="display: none;">Sejong Cultural Center</span></button>
+      <button class="tab-btn" data-filter="performances"><span class="lang-ko">세종오케스트라</span><span class="lang-en" style="display: none;">Sejong Orchestra</span></button>
+      <button class="tab-btn" data-filter="classes"><span class="lang-ko">세종합창단</span><span class="lang-en" style="display: none;">Sejong Choir</span></button>
+    </section>
+
+    <section class="events-container">
+      <div class="event-card" data-category="workshops">
+        <div class="card-title"><span class="lang-ko">여름 캠프</span><span class="lang-en" style="display: none;">Summer Camp</span></div>
+        <img src="images/summercamp2025.JPG" alt="Event 1 Poster">
+      </div>
+      <div class="event-card" data-category="performances">
+        <div class="card-title"><span class="lang-ko">오케스트라</span><span class="lang-en" style="display: none;">Orchestra</span></div>
+        <img src="images/Orchestra1.JPG" alt="Event 2 Poster">
+      </div>
+      <div class="event-card" data-category="classes">
+        <div class="card-title"><span class="lang-ko">합창단</span><span class="lang-en" style="display: none;">Choir</span></div>
+        <img src="images/MemoryChoir.JPG" alt="Event 3 Poster">
+      </div>
+      <div class="event-card" data-category="workshops">
+        <div class="card-title"><span class="lang-ko">여름 캠프</span><span class="lang-en" style="display: none;">Summer Camp</span></div>
+        <img src="images/summercamp2025.JPG" alt="Event 4 Poster">
+      </div>
+       <div class="event-card" data-category="classes">
+        <div class="card-title"><span class="lang-ko">합창단</span><span class="lang-en" style="display: none;">Choir</span></div>
+        <img src="images/MemoryChoir.JPG" alt="Event 5 Poster">
+      </div>
+    </section>
+
+    <!-- Custom Scrollbar -->
+    <div class="custom-scrollbar-container">
+      <div class="custom-scrollbar-track">
+        <div class="custom-scrollbar-thumb"></div>
+      </div>
+    </div>
+ <!-- Title Outside -->
+    <div class="announcement-title-row">
+        <h2 class="announcement-heading"><span class="lang-ko">공지사항</span><span class="lang-en" style="display: none;">Announcements</span></h2>
+        <a href="/announcements.html" class="announcement-link">+</a>
+    </div>
+    
+    <!-- Container With Rounded Box -->
+    <div class="announcement-container">
+        <ul class="announcement-list">
+        <li>
+            <p class="title"><span class="lang-ko">[모집] 세종문화센터 여름 캠프 자원봉사자 모집 안내</span><span class="lang-en" style="display: none;">[Recruitment] Sejong Cultural Center Summer Camp Volunteer Recruitment Notice</span></p>
+            <span class="date">2025.07.14</span>
+        </li>
+        <li>
+            <p class="title"><span class="lang-ko">[공지] 8월 프로그램 일정 변경 안내</span><span class="lang-en" style="display: none;">[Notice] August Program Schedule Change Notice</span></p>
+            <span class="date">2025.07.11</span>
+        </li>
+        <li>
+            <p class="title"><span class="lang-ko">[안내] 광복절 휴무 안내 (8월 15일)</span><span class="lang-en" style="display: none;">[Notice] Liberation Day Holiday Notice (August 15th)</span></p>
+            <span class="date">2025.07.11</span>
+        </li>
+        <li>
+            <p class="title"><span class="lang-ko">[신청] 어린이/어머니 합창단 신규 단원 모집</span><span class="lang-en" style="display: none;">[Application] Children/Mother's Choir New Member Recruitment</span></p>
+            <span class="date">2025.07.10</span>
+        </li>
+        </ul>
+    </div>
+    
+
+      <footer class="custom-footer">
+        <div class="footer-content">
+          <img src="images/LogoImageWhite.png" alt="재단 로고" class="footer-logo">
+          <p class="footer-address">
+            2503 Ellwood Dr SW, Edmonton, AB
+          </p>
+          <div class="footer-contact">
+            <span><i class="fas fa-phone-alt"></i> Tel 780-246-9464</span>
+            <span class="divider">|</span>
+            <span><i class="fas fa-fax"></i> Email Sejong@gmail.com</span>
+          </div>
+          <p class="footer-rights">
+            ©Edmonton Sejong Multicultural Center. <span class="gray">all rights reserved</span>
+          </p>
+        </div>
+      </footer>
+      
+  </main>
+
+  <script src="script3.js"></script>
+</body>
+</html>

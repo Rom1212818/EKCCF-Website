@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>문의 | Sejong Multicultural Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
+        <ul class="nav-menu">
+          <li class="dropdown">
+            <a href="about.html">
+              <span class="lang-ko">재단소개</span>
+              <span class="lang-en" style="display: none;">About Us</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="history.html">
+                <span class="lang-ko">역사</span>
+                <span class="lang-en" style="display: none;">History</span>
+              </a></li>
+              <li><a href="organization.html">
+                <span class="lang-ko">조직도</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="culture.html">
+              <span class="lang-ko">세종문화원</span>
+              <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">
+                <span class="lang-ko">프로그램</span>
+                <span class="lang-en" style="display: none;">Programs</span>
+              </a></li>
+              <li><a href="facility.html">
+                <span class="lang-ko">시설 안내</span>
+                <span class="lang-en" style="display: none;">Facility</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="orchestra.html">
+              <span class="lang-ko">세종오케스트라</span>
+              <span class="lang-en" style="display: none;">Sejong Orchestra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">
+                <span class="lang-ko">정기공연</span>
+                <span class="lang-en" style="display: none;">Performances</span>
+              </a></li>
+              <li><a href="orchestra-members.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="choir.html">
+              <span class="lang-ko">세종합창단</span>
+              <span class="lang-en" style="display: none;">Sejong Choir</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="children-choir.html">
+                <span class="lang-ko">어린이 합창단</span>
+                <span class="lang-en" style="display: none;">Children’s Choir</span>
+              </a></li>
+              <li><a href="mothers-choir.html">
+                <span class="lang-ko">어머니 합창단</span>
+                <span class="lang-en" style="display: none;">Mothers’ Choir</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="inquiry.html">
+              <span class="lang-ko">문의</span>
+              <span class="lang-en" style="display: none;">Contact</span>
+            </a>
+          </li>
+      
+          <li>
+            <a href="announcement.html">
+              <span class="lang-ko">공지사항</span>
+              <span class="lang-en" style="display: none;">Announcements</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+  </header>
+  <section class="inquiry-section">
+    <div class="container">
+      <h1 class="inquiry-title">문의하기</h1>
+      <p class="inquiry-subtitle">프로그램이나 서비스에 대해 궁금한 점이 있으신가요? 메시지를 남겨주시면 최대한 빨리 연락드리겠습니다.</p>
+  
+      <form class="contact-form">
+        <h2 class="form-heading">📧 연락처 양식</h2>
+  
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">👤 이름 *</label>
+            <input type="text" id="name" name="name" placeholder="이름을 입력해주세요" required>
+          </div>
+          <div class="form-group">
+            <label for="email">✉️ 이메일 *</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="phone">📞 전화번호</label>
+          <input type="tel" id="phone" name="phone" placeholder="(000) 000-0000">
+        </div>
+  
+        <div class="form-group">
+          <label for="subject">제목 *</label>
+          <input type="text" id="subject" name="subject" placeholder="문의 주제를 입력해주세요" required>
+        </div>
+  
+        <div class="form-group">
+          <label for="message">메시지 *</label>
+          <textarea id="message" name="message" placeholder="내용을 입력해주세요..." required></textarea>
+        </div>
+  
+        <button type="submit" class="submit-btn">문의 보내기</button>
+      </form>
+    </div>
+  </section>
+  
+
+  <script src="script3.js"></script>
+</body>
+</html>

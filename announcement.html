@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>공지사항 | Sejong Multicultural Center</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
+        <ul class="nav-menu">
+          <li class="dropdown">
+            <a href="about.html">
+              <span class="lang-ko">재단소개</span>
+              <span class="lang-en" style="display: none;">About Us</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="history.html">
+                <span class="lang-ko">역사</span>
+                <span class="lang-en" style="display: none;">History</span>
+              </a></li>
+              <li><a href="organization.html">
+                <span class="lang-ko">조직도</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="culture.html">
+              <span class="lang-ko">세종문화원</span>
+              <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">
+                <span class="lang-ko">프로그램</span>
+                <span class="lang-en" style="display: none;">Programs</span>
+              </a></li>
+              <li><a href="facility.html">
+                <span class="lang-ko">시설 안내</span>
+                <span class="lang-en" style="display: none;">Facility</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="orchestra.html">
+              <span class="lang-ko">세종오케스트라</span>
+              <span class="lang-en" style="display: none;">Sejong Orchestra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">
+                <span class="lang-ko">정기공연</span>
+                <span class="lang-en" style="display: none;">Performances</span>
+              </a></li>
+              <li><a href="orchestra-members.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="choir.html">
+              <span class="lang-ko">세종합창단</span>
+              <span class="lang-en" style="display: none;">Sejong Choir</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="children-choir.html">
+                <span class="lang-ko">어린이 합창단</span>
+                <span class="lang-en" style="display: none;">Children’s Choir</span>
+              </a></li>
+              <li><a href="mothers-choir.html">
+                <span class="lang-ko">어머니 합창단</span>
+                <span class="lang-en" style="display: none;">Mothers’ Choir</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="inquiry.html">
+              <span class="lang-ko">문의</span>
+              <span class="lang-en" style="display: none;">Contact</span>
+            </a>
+          </li>
+      
+          <li>
+            <a href="announcement.html">
+              <span class="lang-ko">공지사항</span>
+              <span class="lang-en" style="display: none;">Announcements</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+  </header>
+  <section class="announcements-page">
+    <div class="announcement-header">
+      <h1>공지사항</h1>
+      <p class="announcement-subtitle">최근 소식 및 안내 사항을 확인하세요</p>
+    </div>
+  
+    <div class="announcement-list-page">
+      <!-- 공지 1 -->
+      <div class="announcement-item">
+        <div class="announcement-line"></div>
+        <div class="announcement-body">
+          <div class="announcement-text">
+            <h2 class="announcement-title">2024 한국 문화 축제 등록 시작</h2>
+            <div class="announcement-date">
+              <i class="fa-regular fa-calendar"></i> 2024-01-15
+            </div>
+            <p class="announcement-detail">
+              제24회 한국 문화 축제가 시작됩니다. 전통 공연과 다양한 한국 음식, 문화 체험을 즐기실 수 있습니다. 조기 등록은 2월 15일까지 가능합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- 공지 2 -->
+      <div class="announcement-item">
+        <div class="announcement-line"></div>
+        <div class="announcement-body">
+          <div class="announcement-text">
+            <h2 class="announcement-title">새로운 한국어 수업 시작</h2>
+            <div class="announcement-date">
+              <i class="fa-regular fa-calendar"></i> 2024-01-10
+            </div>
+            <p class="announcement-detail">
+              초급 및 중급자를 위한 한국어 수업이 새롭게 개설됩니다. 매주 화요일과 목요일 오후 7시부터 8시 30분까지 진행됩니다.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- 공지 3 -->
+      <div class="announcement-item">
+        <div class="announcement-line"></div>
+        <div class="announcement-body">
+          <div class="announcement-text">
+            <h2 class="announcement-title">시설 점검 공지</h2>
+            <div class="announcement-date">
+              <i class="fa-regular fa-calendar"></i> 2024-01-05
+            </div>
+            <p class="announcement-detail">
+              본관은 1월 20일부터 22일까지 시설 점검으로 인해 커뮤니티룸으로 일정이 이동됩니다. 불편을 드려 죄송합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script3.js"></script>
+</body>
+</html>

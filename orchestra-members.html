@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>단원 | 세종오케스트라</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
+        <ul class="nav-menu">
+          <li class="dropdown">
+            <a href="about.html">
+              <span class="lang-ko">재단소개</span>
+              <span class="lang-en" style="display: none;">About Us</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="history.html">
+                <span class="lang-ko">역사</span>
+                <span class="lang-en" style="display: none;">History</span>
+              </a></li>
+              <li><a href="organization.html">
+                <span class="lang-ko">조직도</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="culture.html">
+              <span class="lang-ko">세종문화원</span>
+              <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">
+                <span class="lang-ko">프로그램</span>
+                <span class="lang-en" style="display: none;">Programs</span>
+              </a></li>
+              <li><a href="facility.html">
+                <span class="lang-ko">시설 안내</span>
+                <span class="lang-en" style="display: none;">Facility</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="orchestra.html">
+              <span class="lang-ko">세종오케스트라</span>
+              <span class="lang-en" style="display: none;">Sejong Orchestra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">
+                <span class="lang-ko">정기공연</span>
+                <span class="lang-en" style="display: none;">Performances</span>
+              </a></li>
+              <li><a href="orchestra-members.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="choir.html">
+              <span class="lang-ko">세종합창단</span>
+              <span class="lang-en" style="display: none;">Sejong Choir</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="children-choir.html">
+                <span class="lang-ko">어린이 합창단</span>
+                <span class="lang-en" style="display: none;">Children’s Choir</span>
+              </a></li>
+              <li><a href="mothers-choir.html">
+                <span class="lang-ko">어머니 합창단</span>
+                <span class="lang-en" style="display: none;">Mothers’ Choir</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="inquiry.html">
+              <span class="lang-ko">문의</span>
+              <span class="lang-en" style="display: none;">Contact</span>
+            </a>
+          </li>
+      
+          <li>
+            <a href="announcement.html">
+              <span class="lang-ko">공지사항</span>
+              <span class="lang-en" style="display: none;">Announcements</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+  </header>
+  <section class="orchestra-intro">
+    <div class="intro-content">
+      <h2>세종 오케스트라 단원 소개</h2>
+      <p>
+        세종오케스트라 단원들이 빚어내는 멋지고 아름다운 하모니를 통해 봄의 소리를 들으며
+        평안함과 행복을 마음껏 느껴 보시기 바랍니다. 
+        <br><br>
+        세종오케스트라 단장 박태규
+      </p>
+    </div>
+  </section>
+  <section class="orchestra-filter">
+    <h2>세종 오케스트라 단원</h2>
+    <div class="filter-tabs">
+      <button class="tab active" data-filter="all">전체</button>
+      <button class="tab" data-filter="executive">임원</button>
+      <button class="tab" data-filter="violin">바이올린</button>
+      <button class="tab" data-filter="cello">첼로</button>
+      <button class="tab" data-filter="flute">플루트</button>
+      <button class="tab" data-filter="clarinet">클라리넷</button>
+      <button class="tab" data-filter="horn">호른</button>
+      <button class="tab" data-filter="trombone">트롬본</button>
+      <button class="tab" data-filter="piano">피아노</button>
+    </div>
+  </section>
+  
+  
+  <section class="orchestra-members">
+    <!-- <h3>오케스트라 단원</h3> -->
+    <div class="member-grid">
+        <div class="member-card" data-category="executive">
+        <img src="images/director.jpg" alt="사진">
+        <div class="member-info">
+          <h4>박태규</h4>
+          <p>단장</p>
+        </div>
+      </div>
+      <div class="member-card" data-category="executive">
+        <img src="images/director.jpg" alt="사진">
+        <div class="member-info">
+          <h4>김선희</h4>
+          <p>악장</p>
+        </div>
+      </div>
+      <div class="member-card" data-category="executive">
+        <img src="images/director.jpg" alt="사진">
+        <div class="member-info">
+          <h4>김휘</h4>
+          <p>총무</p>
+        </div>
+      </div>
+      <div class="member-card" data-category="executive">
+        <img src="images/director.jpg" alt="사진">
+        <div class="member-info">
+          <h4>박순회</h4>
+          <p>홍보/디자인</p>
+        </div>
+      </div>
+      <div class="member-card" data-category="violin">
+        <img src="images/violin1.jpg" alt="단원 이름">
+        <div class="member-info">
+          <h4>김선희</h4>
+          <p>바이올린</p>
+        </div>
+      </div>
+        <div class="member-card" data-category="violin">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>강두희</h4>
+            <p>바이올린</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="violin">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>김애린</h4>
+            <p>바이올린</p>
+          </div>
+        </div>
+
+      <div class="member-card" data-category="violin">
+        <img src="images/violin1.jpg" alt="단원 이름">
+        <div class="member-info">
+          <h4>김이레</h4>
+          <p>바이올린</p>
+        </div>
+      </div>
+
+        <div class="member-card" data-category="violin">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>김휘</h4>
+            <p>바이올린</p>
+          </div>
+        </div>
+
+        <div class="member-card" data-category="violin">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>박순회</h4>
+            <p>바이올린</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="violin">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>변희원</h4>
+            <p>바이올린</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="violin">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>임창현</h4>
+            <p>바이올린</p>
+          </div>
+      </div>
+          <div class="member-card" data-category="violin">
+            <img src="images/violin1.jpg" alt="단원 이름">
+            <div class="member-info">
+              <h4>전영민</h4>
+              <p>바이올린</p>
+            </div>
+          </div>
+        <div class="member-card" data-category="violin">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>최고운</h4>
+            <p>바이올린</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="violin">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>함기윤</h4>
+            <p>바이올린</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="cello">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>백경실</h4>
+            <p>첼로</p>
+          </div>
+      </div>
+        <div class="member-card" data-category="cello">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>박태규</h4>
+            <p>첼로</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="cello">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>조현주</h4>
+            <p>첼로</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="flute">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>이보경</h4>
+            <p>플루트</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="flute">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>박중연</h4>
+            <p>플루트</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="flute">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>신예빈</h4>
+            <p>플루트</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="flute">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>이달래</h4>
+            <p>플루트</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="clarinet">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4> 김재훈</h4>
+            <p>클라리넷</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="clarinet">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>강한희</h4>
+            <p>클라리넷</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="clarinet">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>최명진</h4>
+            <p>클라리넷</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="clarinet">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>최우영</h4>
+            <p>클라리넷</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="horn">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>조재은</h4>
+            <p>호른</p>
+          </div>
+        </div>
+
+        <div class="member-card" data-category="trombone">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>김기남</h4>
+            <p>트롬본</p>
+          </div>
+        </div>
+        <div class="member-card" data-category="piano">
+          <img src="images/violin1.jpg" alt="단원 이름">
+          <div class="member-info">
+            <h4>김가영</h4>
+            <p>피아노</p>
+          </div>
+        </div>
+      <!-- Add more members -->
+    </div>
+  </section>
+  <script src="script3.js"></script>
+
+</body>
+</html>
