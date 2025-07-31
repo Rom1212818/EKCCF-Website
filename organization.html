@@ -3,59 +3,182 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>조직도 | 한인문화재단</title>
+  <title>조직도 | Sejong Multicultural Center</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
         <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
           <li class="dropdown">
-            <a href="about.html">재단소개</a>
+            <a href="about.html">
+              <span class="lang-ko">재단소개</span>
+              <span class="lang-en" style="display: none;">About Us</span>
+            </a>
             <ul class="dropdown-menu">
-              <li><a href="history.html">역사</a></li>
-              <li><a href="organization.html">조직도</a></li>
-
+              <li><a href="about.html">
+                <span class="lang-ko">인사말</span>
+                <span class="lang-en" style="display: none;">Greetings</span>
+              </a></li>
+              <li><a href="organization.html">
+                <span class="lang-ko">소개및 조직도</span>
+                <span class="lang-en" style="display: none;">Introduction & Organization</span>
+              </a></li>
+              <li><a href="location.html">
+                <span class="lang-ko">오시는 길</span>
+                <span class="lang-en" style="display: none;">Directions</span>
+              </a></li>
             </ul>
-          </li>
-          <li class="dropdown">
-            <a href="culture.html">세종문화원</a>
-            <ul class="dropdown-menu">
-              <li><a href="programs.html">프로그램</a></li>
-              <li><a href="facility.html">시설안네</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="orchestra.html">세종오케스트라</a>
-            <ul class="dropdown-menu">
-              <li><a href="performance.html">정기공연</a></li>
-              <li><a href="orchestra-members.html">단원</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-              <a href="choir.html">합창단</a>
-              <ul class="dropdown-menu">
-                  <li><a href="children-choir.html">어린이 합창단</a></li>
-                  <li><a href="mothers-choir.html">어머니 합창단</a></li>
-              </ul>
-          </li>
-          <li class="dropdown">
-              <a href="inquiry.html">문의</a>
-              
-          </li>
-          <li class="dropdown">
-              <a href="announcement.html">공지사항</a>
           </li>
       
-          </ul>   
+          <li class="dropdown">
+            <a href="culture.html">
+              <span class="lang-ko">세종문화원</span>
+              <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">
+                <span class="lang-ko">프로그램</span>
+                <span class="lang-en" style="display: none;">Programs</span>
+              </a></li>
+              <li><a href="facility.html">
+                <span class="lang-ko">시설 안내</span>
+                <span class="lang-en" style="display: none;">Facility</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="orchestra.html">
+              <span class="lang-ko">세종오케스트라</span>
+              <span class="lang-en" style="display: none;">Sejong Orchestra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">
+                <span class="lang-ko">정기공연</span>
+                <span class="lang-en" style="display: none;">Performances</span>
+              </a></li>
+              <li><a href="orchestra-members.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="choir.html">
+              <span class="lang-ko">세종합창단</span>
+              <span class="lang-en" style="display: none;">Sejong Choir</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="choir.html">
+                <span class="lang-ko">어머니/어린이 합창단</span>
+                <span class="lang-en" style="display: none;">Mother/Children Choir</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="inquiry.html">
+              <span class="lang-ko">문의</span>
+              <span class="lang-en" style="display: none;">Contact</span>
+            </a>
+          </li>
+      
+          <li>
+            <a href="announcement.html">
+              <span class="lang-ko">공지사항</span>
+              <span class="lang-en" style="display: none;">Announcements</span>
+            </a>
           </li>
         </ul>
-      </nav>
+      </div>
+      
   </header>
-  <div class="content-page">
-    <h1>조직도</h1>
-    <p>재단의 조직 구성은 이사회, 운영팀, 자문위원 등으로 구성되어 있습니다. 이곳에는 조직의 구성도와 각 역할을 소개합니다.</p>
-  </div>
+  <section class="about-page-intro">
+    <div class="intro-content">
+      <h2>
+          <span class="lang-ko">소개및 조직도</span>
+          <span class="lang-en" style="display: none;">Introduction & Organization</span>
+      </h2>
+      <p>
+          <span class="lang-ko">내일을 향해 함께 만드는 발걸음</span>
+          <span class="lang-en" style="display: none;">Taking steps together toward tomorrow</span>
+      </p>
+    </div>
+  </section>
+  <section class="foundation-message-section">
+    <div class="foundation-message-container">
+      <div class="foundation-message-header">
+        <span class="foundation-quote-icon">❝</span>
+        <h2>
+            <span class="lang-ko"><strong>문화로 미래를 열어갈</strong> <span class="highlighted">에드먼튼 세종한인문화재단</span></span>
+            <span class="lang-en" style="display: none;"><strong>Edmonton Sejong Korean Cultural Foundation:</strong> <span class="highlighted">Opening the future through culture</span></span>
+        </h2>
+      </div>
+      <div class="foundation-message-body">
+        <p>
+            <span class="lang-ko">에드먼튼 한인문화재단은 문화의 다양성과 상호 이해를 바탕으로 지역 사회의 화합과 성장을 도모하는 비영리단체입니다.</span>
+            <span class="lang-en" style="display: none;">The Edmonton Korean Cultural Foundation is a non-profit organization that promotes harmony and growth in the local community based on cultural diversity and mutual understanding.</span>
+        </p>
+        <p>
+            <span class="lang-ko">저희 재단은 교육, 예술, 탁아, 헬스&피트니스 등 실생활에 밀접한 다양한 프로그램을 운영하며, 한인 커뮤니티뿐만 아니라 다문화 구성원들과 함께 어우러지는 열린 공간을 제공하고 있습니다.</span>
+            <span class="lang-en" style="display: none;">Our foundation operates a variety of programs closely related to daily life, including education, arts, childcare, and health & fitness, providing an open space for not only the Korean community but also for multicultural members to come together.</span>
+        </p>
+        <p>
+            <span class="lang-ko">센터는 창의적인 다목적 공간 설계를 통해, 정기적인 오케스트라 및 합창단 공연, 전시회, 문화 행사, 커뮤니티 모임 등 폭넓은 활동을 지원합니다. 이를 통해 지역 주민 모두가 참여하고 즐길 수 있는 문화의 장을 마련하고자 노력하고 있습니다.</span>
+            <span class="lang-en" style="display: none;">Through its creative multi-purpose space design, the center supports a wide range of activities, including regular orchestra and choir performances, exhibitions, cultural events, and community gatherings. Through this, we strive to create a cultural venue where all local residents can participate and enjoy.</span>
+        </p>
+        <p>
+            <span class="lang-ko">"내일을 향해 함께 만드는 발걸음"이라는 가치 아래, 에드먼튼 한인문화재단은 앞으로도 다채로운 프로그램과 활력 있는 문화활동을 통해 지역사회에 긍정적인 변화를 이끌어나가겠습니다.</span>
+            <span class="lang-en" style="display: none;">Under the value of "Taking steps together toward tomorrow," the Edmonton Sejong Korean Cultural Foundation will continue to lead positive change in the community through diverse programs and vibrant cultural activities.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="organization-structure">
+    <h2 class="org-title">
+        <span class="lang-ko">조직도</span>
+        <span class="lang-en" style="display: none;">Organization Chart</span>
+    </h2>
+    <img src="images/organization1.png" alt="조직도 이미지" class="org-image" />
+  </section>
+  
+
+  <footer class="custom-footer">
+    <div class="footer-content">
+      <img src="images/LogoImageWhite.png" alt="재단 로고" class="footer-logo">
+      <p class="footer-address">
+        2503 Ellwood Dr SW, Edmonton, AB
+      </p>
+      <div class="footer-contact">
+        <span><i class="fas fa-phone-alt"></i> 780-246-9464</span>
+        <span class="divider">|</span>
+        <span><i class="fas fa-mail-bulk"></i> Sejong@gmail.com</span>
+      </div>
+      <p class="footer-rights">
+        ©Edmonton Sejong Multicultural Center. <span class="gray">all rights reserved</span>
+      </p>
+    </div>
+  </footer>
+  <script src="script3.js"></script>
+  
 </body>
 </html>

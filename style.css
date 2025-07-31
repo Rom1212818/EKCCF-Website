@@ -486,153 +486,194 @@ h2 {
 }
 
 
+/*===================================================================About Us============================================*/
+@media (max-width: 768px) {
+  .about-page-intro {
+    background-image: url('images/SampleBackground1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .about-page-intro .intro-content h2 {
+    color: white;
+    font-size:2rem;
+    text-align: left;
+  }
+  
+  .about-page-intro .intro-content p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+  .about-section {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
 
-/* Reset and base setup */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  .about-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-tab {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  .about-tab.active {
+    background-color: #333;
+    color: white;
+  }
+
+  .about-tab.inactive {
+    background-color: #f2f2f2;
+    color: #555;
+  }
+
+  .about-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .about-image {
+    width: 100%;
+    max-width: 400px;
+    border: 5px solid white; /* no yellow border */
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .about-caption {
+    background-color: #b45555;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    margin-top: -1rem;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 0 0 4px 4px;
+  }
+
+  .about-caption p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  .about-caption h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .about-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #333;
+  }
+  .about-tab.active {
+    background-color: #333;
+    color: white;
+  }
+
+  .about-tab:not(.active) {
+    background-color: #f2f2f2;
+    color: #555;
+  }
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
-body, html {
-  height: 100%;
+/*=============================================================Organization===================================================*/
+.foundation-message-section {
+  background-color: #ffffff;
+  padding: 3rem 1rem;
   font-family: 'Noto Sans KR', sans-serif;
-  background-color: white;
-}
-
-
-
-
-
-.hero-slider {
-  position: relative;
-  max-width: 1600px;
-  margin: 15px auto; /* moved up slightly */
-  padding: 0 20px;
-}
-
-.hero-slider-active {
-  overflow: hidden;
-  position: relative;
-}
-
-.slider-boxes {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-  width: 100%;
-}
-
-.slider-box {
-  background: #ffe5e5;
-  background-image: url('images/texture.jpg'); /* add your subtle texture file */
-  background-repeat: repeat;
-  background-size: cover; /* or 'contain' for SVG */
-  background-blend-mode: multiply; /* helps blend with color */
-  padding: 3rem 3rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-  min-height: 500px;
-  flex: 0 0 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-.slider-content {
-  flex: 0 0 35%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  position: relative;
-}
-
-.slider-image {
-  flex: 0 0 65%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 1rem;
-}
-
-.slider-image img {
-  width: auto;
-  height: auto;
-  max-height: 400px;  /* adjust this value to make the image smaller */
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-
-.slider-box h2 { /*EKCCF 여름문화축제*/
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #12440a;
-}
-
-.slider-box p {
-  font-size: 1rem;
+  line-height: 1.8;
   color: #333;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
 }
 
-.slider-link {
-  position: absolute;
-  bottom: -16rem;
-  left: 0;
+.foundation-message-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.foundation-message-header {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.foundation-quote-icon {
+  font-size: 3rem;
+  color: #cccccc;
   display: inline-block;
-  background-color: #111;
-  color: white;
-  padding: 1em 2em;
-  text-decoration: none;
-  font-size: 1rem; /* fixed typo from '1rems' */
-  border-radius: 4px;
-  width: fit-content;
-  max-width: 200px;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
-.slider-controls {
-  display: flex;
-  justify-content: flex-start; /* Aligns contents to the left */
-  align-items: center;
-  gap: 1.5em;
-  font-family: 'Noto Sans KR', sans-serif;
-  margin: 2rem 0 0 3rem; /* Add left margin to create spacing from page edge */
-  font-size: 1.6rem;
-  color: #999;
-}
-
-
-.slider-controls button {
-  background: none;
-  border: none;
+.foundation-message-header h2 {
   font-size: 1.5rem;
-  color: #999;
-  cursor: pointer;
-  transition: color 0.2s ease;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  line-height: 1.4;
 }
 
-.slider-controls button:hover {
-  color: #333;
+.foundation-message-header .highlighted {
+  color: #cc0000; /* Adjust as needed */
 }
 
-.slider-controls .pause-icon {
-  border-left: 1px solid #ccc;
-  padding-left: 1rem;
-  margin-left: 1rem;
+.foundation-message-body p {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
 }
 
-.pause-img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+@media (max-width: 768px) {
+  .foundation-message-section {
+    padding: 2rem 1rem;
+  }
+
+  .foundation-message-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .foundation-message-body p {
+    font-size: 0.95rem;
+  }
+  .organization-structure {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  .org-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-bottom: 3px solid #b0303b; /* red underline */
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+  }
+  
+  .org-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 1rem;
+  }
+  
 }
 
 
@@ -655,6 +696,182 @@ body, html {
   font-size: 2rem;
   cursor: pointer;
 }
+/* ======================================================================Facility=============================================*/
+.facility-wrapper {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.facility-tabs {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.facility-tabs .tab {
+  background: none;
+  border: none;
+  font-size: 0.6rem;
+  color: #333;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.facility-tabs .tab.active {
+  color: #bf0000;
+  border-bottom: 2px solid #bf0000;
+  font-weight: 600;
+}
+
+.facility-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.facility-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.facility-content {
+  padding: 1.5rem;
+}
+
+.facility-category {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.facility-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.facility-info p {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.facility-info strong {
+  font-weight: 600;
+}
+
+.facility-description {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+.facility-renter-guidelines {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.renter-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.renter-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.renter-list {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.renter-button-wrapper {
+  text-align: center;
+}
+
+.renter-button {
+  background-color: #b0303b;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.renter-button:hover {
+  background-color: #8f1f2d;
+}
+
+@media (max-width: 768px) {
+  .facility-tabs {
+    gap: 0.8rem;
+    font-size: 0.6rem;
+  }
+
+  .facility-title {
+    font-size: 1rem;
+  }
+
+  .facility-description {
+    font-size: 0.95rem;
+  }
+  .facility-page-intro {
+    background-image: url('images/facility.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  .facility-page-intro .intro-content h2 {
+    color: white;
+    font-size:2rem;
+    text-align: left;
+  }
+  
+  .facility-page-intro .intro-content p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+  .renter-title {
+    font-size: 1.2rem;
+  }
+
+  .renter-list {
+    font-size: 0.9rem;
+  }
+}
+
 /* ==================================================================Events====================================================*/
 /* Programs & Events Section */
 .program-section {
@@ -677,7 +894,7 @@ body, html {
 
 .underline {
   margin: 10px auto;
-  width: 60px;
+  width: 80px;
   height: 4px;
   background-color: #e11d48;
   border-radius: 2px;
@@ -1057,8 +1274,100 @@ textarea {
   align-items: center;
   gap: 0.5rem;
 }
+/*========================================================Orchestra Performance=================================================*/
+@media (max-width: 768px) {
+  .performances-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  .performances-title {
+    font-size: 2rem;
+    font-weight: 800;
+    border-bottom: 3px solid #e63946;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  
+  .performance-card {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2rem;
+  }
+  
+  .performance-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .performance-name {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .performance-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    color: #e63946;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .performance-info i {
+    margin-right: 6px;
+  }
+  
+  .performance-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .performance-buttons {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+  
+  .performance-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .performance-btn.btn-primary {
+    background-color: #c1121f;
+    color: white;
+    border: none;
+  }
+  
+  .performance-btn.btn-primary:hover {
+    background-color: #a60f1a;
+  }
+  
+  .performance-btn.btn-outline {
+    border: 2px solid #c1121f;
+    color: #c1121f;
+    background: transparent;
+  }
+  
+  .performance-btn.btn-outline:hover {
+    background-color: #f8d7da;
+  }
+  
 
 
+}
 
 /* Mobile */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -1220,7 +1529,7 @@ textarea {
   height: 50px;
   color: #5c2323;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.85rem;
   background: #f4cfcf;
   padding: 0.7rem 1rem; /*text padding*/
   border-radius: 10px;
@@ -1254,100 +1563,7 @@ textarea {
 
 
 
-  /* ===================================================== President Message ====================================================*/
-  /* President's Message Section */
-.president-message {
-  padding: 2rem 1rem;
-  background-color: #ffffff;
-}
-
-.president-message .container {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.message-header {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.message-header h2 {
-  font-size: 1.5rem;
-  color: #222;
-  margin-bottom: 0.2rem;
-}
-
-.message-header p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.message-header .underline {
-  width: 60px;
-  height: 4px;
-  background-color: #c0392b;
-  border-radius: 2px;
-  margin: 0.5rem auto;
-}
-
-.message-card {
-  background-color: #fefefe;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  padding: 1.5rem;
-}
-
-.president-info {
-  text-align: center;
-  margin-bottom: 1.2rem;
-}
-.president-photo {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  margin: 0 auto 1rem auto;
-  display: block;
-}
-
-
-.president-icon {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(to bottom right, #ffe5e5, #fddcdc);
-  border-radius: 50%;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #b20000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem auto;
-}
-
-.president-info h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-.president-info .subtitle {
-  color: #777;
-  font-size: 0.9rem;
-}
-
-.message-content p {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.message-content .signature {
-  font-weight: 500;
-  color: #222;
-}
+ 
 /*--------------------------------------------------------Contact Page-------------------------------------------------------------*/
 .contact-section {
   background: linear-gradient(to bottom, #f9fafb, #ffffff);
@@ -1552,7 +1768,7 @@ section {
   padding: 1.5rem;
 }
 .orchestra-intro {
-  background-image: url('images/orchestrabackground2.png'); /* Update with your image path */
+  background-image: url('images/OrchestraBackground1.png'); /* Update with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1664,3 +1880,5 @@ section {
   padding: 1rem;
 }
 }
+
+

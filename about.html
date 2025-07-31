@@ -7,108 +7,217 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-      <nav class="navbar">
-        <div class="nav-container">
-          <!-- Left: Logo and EKCCF -->
-          <div class="nav-left">
-            <a href="index.html" class="nav-branding">
-              <img src="images/logo3.png" alt="EKCCF 로고" />
-              <span class="nav-text">에드먼튼 한인문화재단</span>
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
+        <ul class="nav-menu">
+          <li class="dropdown">
+            <a href="about.html">
+              <span class="lang-ko">재단소개</span>
+              <span class="lang-en" style="display: none;">About Us</span>
             </a>
-          </div>
+            <ul class="dropdown-menu">
+              <li><a href="about.html">
+                <span class="lang-ko">인사말</span>
+                <span class="lang-en" style="display: none;">History</span>
+              </a></li>
+              <li><a href="organization.html">
+                <span class="lang-ko">소개및 조직도</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
+              <li><a href="location.html">
+                <span class="lang-ko">오시는 길</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="culture.html">
+              <span class="lang-ko">세종문화원</span>
+              <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">
+                <span class="lang-ko">프로그램</span>
+                <span class="lang-en" style="display: none;">Programs</span>
+              </a></li>
+              <li><a href="facility.html">
+                <span class="lang-ko">시설 안내</span>
+                <span class="lang-en" style="display: none;">Facility</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="orchestra.html">
+              <span class="lang-ko">세종오케스트라</span>
+              <span class="lang-en" style="display: none;">Sejong Orchestra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">
+                <span class="lang-ko">정기공연</span>
+                <span class="lang-en" style="display: none;">Performances</span>
+              </a></li>
+              <li><a href="orchestra-members.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="choir.html">
+              <span class="lang-ko">세종합창단</span>
+              <span class="lang-en" style="display: none;">Sejong Choir</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="choir.html">
+                <span class="lang-ko">어머니/어린이 합창단</span>
+                <span class="lang-en" style="display: none;">Mother/Children Choir</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="inquiry.html">
+              <span class="lang-ko">문의</span>
+              <span class="lang-en" style="display: none;">Contact</span>
+            </a>
+          </li>
+      
+          <li>
+            <a href="announcement.html">
+              <span class="lang-ko">공지사항</span>
+              <span class="lang-en" style="display: none;">Announcements</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+  </header>
+      
+  <section class="about-page-intro">
+    <div class="intro-content">
+      <h2>
+          <span class="lang-ko">인사말</span>
+          <span class="lang-en" style="display: none;">Introduction</span>
+      </h2>
+      <p>
+          <span class="lang-ko">내일을 향해 함께 만드는 발걸음</span>
+          <span class="lang-en" style="display: none;">Welcome to the Edmonton Sejong Cultural Foundation.</span>
+      </p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="about-toggle">
+      <button class="about-tab active" onclick="showIntro('ceo')">EKCCF 이사장 인사말</button>
+      <button class="about-tab" onclick="showIntro('chairman')">세종문화 원장 인사말</button>
+    </div>
   
-          <!-- Center: Navigation menu -->
-          <ul class="nav-menu">
-            <li class="dropdown">
-              <a href="about.html">재단소개</a>
-              <ul class="dropdown-menu">
-                <li><a href="history.html">역사</a></li>
-                <li><a href="organization.html">조직도</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="culture.html">세종문화원</a>
-              <ul class="dropdown-menu">
-                <li><a href="programs.html">프로그램</a></li>
-                <li><a href="facility.html">시설 안내</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="orchestra.html">세종오케스트라</a>
-              <ul class="dropdown-menu">
-                <li><a href="performance.html">정기공연</a></li>
-                <li><a href="orchestra-members.html">단원</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="choir.html">세종합창단</a>
-              <ul class="dropdown-menu">
-                <li><a href="children-choir.html">어린이 합창단</a></li>
-                <li><a href="mothers-choir.html">어머니 합창단</a></li>
-              </ul>
-            </li>
-            <li><a href="inquiry.html">문의</a></li>
-            <li><a href="announcement.html">공지사항</a></li>
-          </ul>
+    <!-- 대표이사 인사말 -->
+    <div class="about-profile-content" id="ceo" style="display: block;">
+      <div class="about-profile">
+        <img src="images/president.jpg" alt="대표이사 사진" class="about-image">
+        <div class="about-caption">
+          <p>에드몬톤 세종문화재단 이사장</p>
+          <h2>조순익</h2>
         </div>
-      </nav>
-      </header>
-      
-      <section class="president-message">
-        <div class="container">
-          <div class="message-header">
-            <h2>
-              <span class="lang-ko">취임사</span>
-              <span class="lang-en" style="display: none;">Inaugral Address</span>
-            </h2>
-            <p>
-    
-            </p>
-            <div class="underline"></div>
-          </div>
-      
-          <div class="message-card">
-            <div class="president-info">
-              <img src="images/president.jpg" alt="President Photo" class="president-photo" />
-              <h3>
-                <span class="lang-ko">조순익 이사장</span>
-                <span class="lang-en" style="display: none;">Chairman Soonik Cho</span>
-              </h3>
-              <p class="subtitle">
-                <span class="lang-ko">에드몬톤 세종문화재단</span>
-                <span class="lang-en" style="display: none;">Edmonton Sejong Cultural Foundation</span>
-              </p>
-            </div>
-      
-            <div class="message-content">
-              <p>
-                <span class="lang-ko">존경하는 에드몬톤 교민여러분,저는 이 자리를 빌어 제 8대 에드몬톤 세종문화재단 이사장으로 취임하게 된 것을 진심으로 기쁘게 생각합니다. 저에게 주어진 이 소중한 책임을 무겁게 느끼며 ,앞으로의 여정에서 투명성,실현 가능성,그리고 미래 지향성을 기반으로 한국 문화 발전에 최선을 다할 것을 다짐합니다. </span>
-                <span class="lang-en" style="display: none;">Dear members of the Edmonton Korean community, I am truly honored to be inaugurated as the 8th Chairman of the Edmonton Sejong Cultural Foundation. I take this responsibility seriously and promise to uphold transparency, feasibility, and forward-thinking in promoting Korean culture.</span>
-              </p>
-              <p>
-                <span class="lang-ko">첫째, 투명성입니다.문화는 공동체의 자산입니다. 따라서 우리 문화재단의 모든 활동과 결정은 투명하게 공개되어야 한다고 믿습니다. 우리는 지역 주민과의 소통을 강화하고,의견을 경청하며 문화 예산과 프로그램 운영에 대한 정보를 투명하게 제공함으로써  신뢰받는 조직으로 거듭나겠습니다. 이를 통해 여러분의 목소리가 문화 정책에 실질적으로 반영될 수 있도록 하겠습니다. </span>
-                <span class="lang-en" style="display: none;">First, transparency. Culture is a communal asset, and all activities and decisions of our foundation should be open and transparent. We will enhance communication, listen to opinions, and share information about cultural budgets and operations to become a trusted organization. This will ensure your voices are reflected in cultural policy.</span>
-              </p>
-              <p>
-                <span class="lang-ko">둘째, 정책의 실현 가능성입니다. 이러한 비전이 단순한 구호에 그치지 않도록 구체적인 실행 계획을 마련하겠습니다. 우리의 목표는 문화예술 프로그램을 통해 지역사회의 삶의 질을 향상시키고,다양한 문화적 욕구를 충족하는 것입니다. 이를 위해 지역 예술가 혹은 한국의 전문 문화단체와의 협력 관계를 강화하고,실질적인 프로그램과 프로젝트를 통해 문화 행사의 기회를 확대해 나가겠습니다. </span>
-                <span class="lang-en" style="display: none;">Second, feasibility. We will create detailed plans so that our vision is not just words. Our goal is to improve quality of life through arts programs and meet diverse cultural needs. We will strengthen partnerships with local and Korean cultural groups to offer meaningful programs and events.</span>
-              </p>
-              <p>
-                <span class="lang-ko">셋째,미래 지향성입니다.변화하는 시대에 발맞춰 우리의 문화도 지속적으로 발전해야 합니다. 우리는 디지털 시대의 흐름을 반영하여 새로운 플랫폼을 통해 더 많은 사람둘의 문화를 경험할 수 있도록 하겠습니다. 또한 차세대 문화 인재를 양성하고,다양한 세대가 함께 참여할 수 있는 프로그램을 마련하여 ,미래의 문화가 더욱 풍요롭고 다양해질 수 있도록 힘쓰겠습니다. </span>
-                <span class="lang-en" style="display: none;">Third, forward-thinking. Culture must evolve with changing times. We will embrace digital platforms to reach broader audiences and nurture the next generation of cultural leaders. We'll also develop intergenerational programs to ensure our cultural future is rich and diverse.</span>
-              </p>
-              <p>
-                <span class="lang-ko">끝으로 ,여러분이 함께하는 문화 공감의 장을 만들어 나가겠습니다. 여러분의 협력과 참여가  그 어떤 것보다 소중합니다. 함께 더 나은 문화의 미래를 만들어 나갑시다 .여러분의 많은 관심과 성원을 부탁드립니다. 감사합니다.</span>
-                <span class="lang-en" style="display: none;">Finally, let us create a shared cultural experience. Your support and participation are the most valuable. Let’s build a better cultural future together. I deeply appreciate your continued interest and encouragement.</span>
-              </p>
-              <p class="signature">
-                <span class="lang-ko"><strong>조순익 배상</strong><br>에드몬톤 세종문화재단 이사장</span>
-                <span class="lang-en" style="display: none;"><strong>Soonik Cho</strong><br>Chairman, Edmonton Sejong Cultural Foundation</span>
-              </p>
-            </div>
-          </div>
+      </div>
+      <div class="about-intro">
+        <p>
+          <span class="lang-ko">존경하는 에드몬톤 교민여러분,저는 이 자리를 빌어 제 8대 에드몬톤 세종문화재단 이사장으로 취임하게 된 것을 진심으로 기쁘게 생각합니다. 저에게 주어진 이 소중한 책임을 무겁게 느끼며 ,앞으로의 여정에서 투명성,실현 가능성,그리고 미래 지향성을 기반으로 한국 문화 발전에 최선을 다할 것을 다짐합니다. </span>
+          <span class="lang-en" style="display: none;">Dear members of the Edmonton Korean community, I am truly honored to be inaugurated as the 8th Chairman of the Edmonton Sejong Cultural Foundation. I take this responsibility seriously and promise to uphold transparency, feasibility, and forward-thinking in promoting Korean culture.</span>
+        </p>
+        <p>
+          <span class="lang-ko">첫째, 투명성입니다.문화는 공동체의 자산입니다. 따라서 우리 문화재단의 모든 활동과 결정은 투명하게 공개되어야 한다고 믿습니다. 우리는 지역 주민과의 소통을 강화하고,의견을 경청하며 문화 예산과 프로그램 운영에 대한 정보를 투명하게 제공함으로써  신뢰받는 조직으로 거듭나겠습니다. 이를 통해 여러분의 목소리가 문화 정책에 실질적으로 반영될 수 있도록 하겠습니다. </span>
+          <span class="lang-en" style="display: none;">First, transparency. Culture is a communal asset, and all activities and decisions of our foundation should be open and transparent. We will enhance communication, listen to opinions, and share information about cultural budgets and operations to become a trusted organization. This will ensure your voices are reflected in cultural policy.</span>
+        </p>
+        <p>
+          <span class="lang-ko">둘째, 정책의 실현 가능성입니다. 이러한 비전이 단순한 구호에 그치지 않도록 구체적인 실행 계획을 마련하겠습니다. 우리의 목표는 문화예술 프로그램을 통해 지역사회의 삶의 질을 향상시키고,다양한 문화적 욕구를 충족하는 것입니다. 이를 위해 지역 예술가 혹은 한국의 전문 문화단체와의 협력 관계를 강화하고,실질적인 프로그램과 프로젝트를 통해 문화 행사의 기회를 확대해 나가겠습니다. </span>
+          <span class="lang-en" style="display: none;">Second, feasibility. We will create detailed plans so that our vision is not just words. Our goal is to improve quality of life through arts programs and meet diverse cultural needs. We will strengthen partnerships with local and Korean cultural groups to offer meaningful programs and events.</span>
+        </p>
+        <p>
+          <span class="lang-ko">셋째,미래 지향성입니다.변화하는 시대에 발맞춰 우리의 문화도 지속적으로 발전해야 합니다. 우리는 디지털 시대의 흐름을 반영하여 새로운 플랫폼을 통해 더 많은 사람둘의 문화를 경험할 수 있도록 하겠습니다. 또한 차세대 문화 인재를 양성하고,다양한 세대가 함께 참여할 수 있는 프로그램을 마련하여 ,미래의 문화가 더욱 풍요롭고 다양해질 수 있도록 힘쓰겠습니다. </span>
+          <span class="lang-en" style="display: none;">Third, forward-thinking. Culture must evolve with changing times. We will embrace digital platforms to reach broader audiences and nurture the next generation of cultural leaders. We'll also develop intergenerational programs to ensure our cultural future is rich and diverse.</span>
+        </p>
+        <p>
+          <span class="lang-ko">끝으로 ,여러분이 함께하는 문화 공감의 장을 만들어 나가겠습니다. 여러분의 협력과 참여가  그 어떤 것보다 소중합니다. 함께 더 나은 문화의 미래를 만들어 나갑시다 .여러분의 많은 관심과 성원을 부탁드립니다. 감사합니다.</span>
+          <span class="lang-en" style="display: none;">Finally, let us create a shared cultural experience. Your support and participation are the most valuable. Let’s build a better cultural future together. I deeply appreciate your continued interest and encouragement.</span>
+        </p>
+      </div>
+    </div>
+  
+    <!-- 이사장 인사말 -->
+    <div class="about-profile-content" id="chairman" style="display: none;">
+      <div class="about-profile">
+        <img src="images/about-chairman.png" alt="이사장 사진" class="about-image">
+        <div class="about-caption">
+          <p>세종문화 원장</p>
+          <h2>김태홍</h2>
         </div>
-      </section>
+      </div>
+      <div class="about-intro">
+        <p>세종문화회관을 찾아주셔서 감사합니다</p>
+        <p>머나먼 이국 땅 이곳 캐나다 에드먼튼에서 오랜세월 정착하며 살아가고
+          있는 자랑스러운 대한민국 동포여러분
+          이 분 한분들이 저희 세종문화회관을 운영하는원동력이며
+          최고의 자랑입니다
+          
+          21세기는 전세계가  한국문화에 열광하는 시대입니다 
+          한국인에 한사람으로 자랑스러운 한류 문화를
+          캐나다 에드먼튼 땅에 사명감을 가지고 더욱 더 개발하고
+          성장시키는 데 도움이 되고자 하루 하루 노력하고 있습니다</p>
+        <p>저희 세종문화회관 임원분들에
+          노력과 땀방울이 캐나다 에드먼튼 땅에 거주하는
+          모든분들의 삶이 아름다워지도록 돕고 나누는 방법을 모색하고 있으며
+          이 작은 헌신이 대한민국을 한 단계 성장시키는 발판이 된다고 믿습니다
+          
+          앞으로도 저를 비롯한 임원진들은 
+          전 생애에 걸쳐
+          한국문화가 더 많은 세계인들에 꿈을 이룰 수 있도록
+          든든한 버팀목이 되고 자라나는 다음 세대들에게
+          대한민국이라는 자긍심과 자부심을 갖게 될 수 있도록
+          지속적으로  노력하겠습니다
+          
+          많은분들에 따뜻한 관심과 변함없는 응원을 부탁드리겠습니다</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="custom-footer">
+    <div class="footer-content">
+      <img src="images/LogoImageWhite.png" alt="재단 로고" class="footer-logo">
+      <p class="footer-address">
+        2503 Ellwood Dr SW, Edmonton, AB
+      </p>
+      <div class="footer-contact">
+        <span><i class="fas fa-phone-alt"></i> 780-246-9464</span>
+        <span class="divider">|</span>
+        <span><i class="fas fa-mail-bulk"></i> Sejong@gmail.com</span>
+      </div>
+      <p class="footer-rights">
+        ©Edmonton Sejong Multicultural Center. <span class="gray">all rights reserved</span>
+      </p>
+    </div>
+  </footer>
+      <script src="script3.js"></script>
 </body>
 </html>

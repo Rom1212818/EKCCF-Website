@@ -7,55 +7,219 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
         <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
           <li class="dropdown">
-            <a href="about.html">재단소개</a>
+            <a href="about.html">
+              <span class="lang-ko">재단소개</span>
+              <span class="lang-en" style="display: none;">About Us</span>
+            </a>
             <ul class="dropdown-menu">
-              <li><a href="history.html">역사</a></li>
-              <li><a href="organization.html">조직도</a></li>
-
+              <li><a href="about.html">
+                <span class="lang-ko">인사말</span>
+                <span class="lang-en" style="display: none;">History</span>
+              </a></li>
+              <li><a href="organization.html">
+                <span class="lang-ko">소개및 조직도</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
+              <li><a href="location.html">
+                <span class="lang-ko">오시는 길</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
             </ul>
-          </li>
-          <li class="dropdown">
-            <a href="culture.html">세종문화원</a>
-            <ul class="dropdown-menu">
-              <li><a href="programs.html">프로그램</a></li>
-              <li><a href="facility.html">시설안네</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="orchestra.html">세종오케스트라</a>
-            <ul class="dropdown-menu">
-              <li><a href="performance.html">정기공연</a></li>
-              <li><a href="orchestra-members.html">단원</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-              <a href="choir.html">합창단</a>
-              <ul class="dropdown-menu">
-                  <li><a href="children-choir.html">어린이 합창단</a></li>
-                  <li><a href="mothers-choir.html">어머니 합창단</a></li>
-              </ul>
-          </li>
-          <li class="dropdown">
-              <a href="inquiry.html">문의</a>
-              
-          </li>
-          <li class="dropdown">
-              <a href="announcement.html">공지사항</a>
           </li>
       
-          </ul>   
+          <li class="dropdown">
+            <a href="culture.html">
+              <span class="lang-ko">세종문화원</span>
+              <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="programs.html">
+                <span class="lang-ko">프로그램</span>
+                <span class="lang-en" style="display: none;">Programs</span>
+              </a></li>
+              <li><a href="facility.html">
+                <span class="lang-ko">시설 안내</span>
+                <span class="lang-en" style="display: none;">Facility</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="orchestra.html">
+              <span class="lang-ko">세종오케스트라</span>
+              <span class="lang-en" style="display: none;">Sejong Orchestra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">
+                <span class="lang-ko">정기공연</span>
+                <span class="lang-en" style="display: none;">Performances</span>
+              </a></li>
+              <li><a href="orchestra-members.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="choir.html">
+              <span class="lang-ko">세종합창단</span>
+              <span class="lang-en" style="display: none;">Sejong Choir</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="choir.html">
+                <span class="lang-ko">어머니/어린이 합창단</span>
+                <span class="lang-en" style="display: none;">Mother/Children Choir</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="inquiry.html">
+              <span class="lang-ko">문의</span>
+              <span class="lang-en" style="display: none;">Contact</span>
+            </a>
+          </li>
+      
+          <li>
+            <a href="announcement.html">
+              <span class="lang-ko">공지사항</span>
+              <span class="lang-en" style="display: none;">Announcements</span>
+            </a>
           </li>
         </ul>
-      </nav>
+      </div>
+      
   </header>
-  <div class="content-page">
-    <h1>세종문화원 시설안내</h1>
-    <p>세미나실, 전시공간, 강의실 등 다양한 용도로 활용 가능한 시설들을 소개합니다.</p>
-  </div>
+  <section class="facility-page-intro">
+    <div class="intro-content">
+      <h2>
+          <span class="lang-ko">시설 소개</span>
+          <span class="lang-en" style="display: none;">Introduction</span>
+      </h2>
+      <p>
+          <span class="lang-ko">에드먼튼 한인문화재단에 오신 것을 환영합니다!</span>
+          <span class="lang-en" style="display: none;">Welcome to the Edmonton Sejong Cultural Foundation.</span>
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="facility-wrapper">
+    <div class="facility-tabs">
+      <button class="tab active">multipurpose hall/gym</button>
+      <button class="tab">conference room</button>
+      <button class="tab">classroom</button>
+      <button class="tab">kitchen</button>
+    </div>
+  
+    <div class="facility-card">
+      <img src="images/Multipurposehall.png" alt="인천아트플랫폼" class="facility-image" />
+  
+      <div class="facility-content">
+        <h2 class="facility-title">다목적홀</h2>
+  
+        <div class="facility-info">
+          <p><strong>size</strong> ｜ 4800 square feet</p>
+          <p><strong>cost</strong> ｜ $120/hour (5 hrs minimum) or $1200/day (12pm - 12am)</p>
+        </div>
+  
+        <p class="facility-description">
+          Capacity of 330 banquet style; 528 theatre style
+
+High ceiling (28 feet) with 6 sectional lights (not dimming lights)
+
+
+
+Any size of stage can be provided as requested (additional cost)
+
+Cleaning service can be arranged (additional cost)
+
+Maximum of 26 round tables (accommodating 8-10 people) and 300 chairs will be provided.
+
+Kitchen,bar, and hallway is connected.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="facility-renter-guidelines">
+    <h2 class="renter-title">대관자 유의사항</h2>
+    <p class="renter-description">
+      시설 사용 전 아래 유의사항을 반드시 숙지해 주시기 바랍니다.
+    </p>
+    <ol class="renter-list">
+      <li>1. Renter must be 25 years of age or older and provide proof of Identification upon signing rental agreement.
+
+        </li>
+      <li>2. Damage deposit is required with signed rental agreement.</li>
+      <li>3. Liquor license and insurance for the event are required if liquor will be served.</li>
+      <li>4. Renter must restrict attendance to invited guests and accept responsibility for the conduct of all those in attendance.</li>
+      <li>5. Renter must restrict activities that may cause a fire, safety or health hazard.</li>
+      <li>6. The centre is a smoke free building. All smoking must be restricted to the parking lot on the south side of the building.  The renter is responsible to clean-up used smoking materials after their event.</li>
+      <li>7. Renter may choose to be responsible for set up and clean up or may choose to pay for that service.
+        
+            Clean up requirements include:
+        
+               ・Stacking and storage of all tables and chairs.
+        
+               ・Cleaning of kitchen counters and mopping of kitchen floor.
+        
+               ・Sweeping of all floors including mopping of spills.
+        
+               ・Bagging of garbage and placement in outside receptacle.
+        
+               ・Removal of all decorations including tape.
+        
+               ・Clean the refrigerator and freezer.</li>
+    </ol>
+    <div class="renter-button-wrapper">
+      <a href="inquiry.html" class="renter-button">대관 신청하기</a>
+    </div>
+  </section>
+  
+  
+  <footer class="custom-footer">
+    <div class="footer-content">
+      <img src="images/LogoImageWhite.png" alt="재단 로고" class="footer-logo">
+      <p class="footer-address">
+        2503 Ellwood Dr SW, Edmonton, AB
+      </p>
+      <div class="footer-contact">
+        <span><i class="fas fa-phone-alt"></i> 780-246-9464</span>
+        <span class="divider">|</span>
+        <span><i class="fas fa-mail-bulk"></i> Sejong@gmail.com</span>
+      </div>
+      <p class="footer-rights">
+        ©Edmonton Sejong Multicultural Center. <span class="gray">all rights reserved</span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="script3.js"></script>
 </body>
 </html>
