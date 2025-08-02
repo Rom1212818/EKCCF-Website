@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Hamburger Menu Toggle
   window.toggleMobileMenu = function () {
     const wrapper = document.querySelector('.hamburger-wrapper');
-    const hamburger = document.querySelector('.hamburger-menu');
+    const hamburger = document.querySelector('.hamburger-menu, .hamburger-menu-index');
     if (wrapper && hamburger) {
       wrapper.classList.toggle('active');
       hamburger.classList.toggle('active');
@@ -433,5 +433,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initial display
     showSlide(currentIndex);
+  }
+  //Announcement
+  const tabs = document.querySelectorAll('.tab');
+  const notices = document.querySelectorAll('.notice-list li');
+  const searchInput = document.getElementById('notice-search');
+  const categoryFilter = document.getElementById('category-filter');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      filterNotices();
+    });
+  });
+
+  function filterNotices() {
+    const keyword = searchInput.value.toLowerCase();
+    const selectedCategory = document.querySelector('.tab.active').dataset.filter;
+
+    notices.forEach(li => {
+      const type = li.dataset.type;
+      const text = li.innerText.toLowerCase();
+
+      const matchCategory = selectedCategory === 'all' || type === selectedCategory;
+      const matchKeyword = text.includes(keyword);
+
+      li.style.display = matchCategory && matchKeyword ? '' : 'none';
+    });
+  }
+
+  // Orchestra Members Page: Filtering
+  const orchestraFilter = document.querySelector('.orchestra-filter');
+  if (orchestraFilter) {
+    const filterButtons = orchestraFilter.querySelectorAll('.filter-tabs .tab');
+    const memberCards = document.querySelectorAll('.orchestra-members .member-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+
+        // Update button active state
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Filter cards
+        memberCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || filter === category) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
   }
 });

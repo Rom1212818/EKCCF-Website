@@ -3,16 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>공지사항 | Sejong Multicultural Center</title>
+  <title>달력 | Sejong Multicultural Center</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
   <header class="main-header">
     <div class="logo-container">
       <a href="index.html" class="nav-branding">
-        <img src="images/LogoImage1.png" alt="EKCCF 로고" class="logo"/>
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
       </a>
     </div>
     <nav class="main-nav">
@@ -114,55 +112,19 @@
       </div>
       
   </header>
-  <section class="announcements-page">
-    <div class="announcement-header">
-      <h1>공지사항</h1>
-      <p class="announcement-subtitle">최근 소식 및 안내 사항을 확인하세요</p>
+      
+  <section class="about-page-intro">
+    <div class="intro-content">
+      <h2>
+          <span class="lang-ko">달력</span>
+          <span class="lang-en" style="display: none;">Introduction</span>
+      </h2>
+      <p>
+          <span class="lang-ko">내일을 향해 함께 만드는 발걸음</span>
+          <span class="lang-en" style="display: none;">Welcome to the Edmonton Sejong Cultural Foundation.</span>
+      </p>
     </div>
-    </section>
-  
-    <section class="notice-board">
-      <!-- Tabs -->
-      <div class="notice-tabs">
-        <button class="tab active" data-filter="all">전체</button>
-        <button class="tab" data-filter="공지사항">공지사항</button>
-        <button class="tab" data-filter="채용공고">신청</button>
-        <button class="tab" data-filter="입찰공고">안내</button>
-        <button class="tab" data-filter="모집 및 행사">모집 및 행사</button>
-      </div>
-    
-      <!-- Search -->
-      <div class="notice-search">
-        <select id="category-filter">
-          <option value="all">전체</option>
-          <option value="공지사항">공지사항</option>
-          <option value="채용공고">신청</option>
-          <option value="입찰공고">안내</option>
-          <option value="모집 및 행사">모집</option>
-        </select>
-        <input type="text" id="notice-search" placeholder="검색어 입력" />
-        <button onclick="filterNotices()">🔍</button>
-      </div>
-    
-      <!-- List -->
-      <ul class="notice-list">
-        <li data-type="모집 및 행사">
-          <strong>모집안내</strong>
-          <span>세종문화센터 여름 캠프 자원봉사자 모집 안내</span>
-        </li>
-        <li data-type="공지사항">
-          <strong>공지사항</strong>
-          <span>세종문화센터 여름 프로그램 안내</span>
-        </li>
-        <li data-type="채용공고">
-          <strong>신청</strong>
-          <span>어린이/어머니 합창단 신규 단원 모집</span>
-        </li>
-        <!-- Add more notices as needed -->
-      </ul>
-    </section>
-    
-  <script src="script3.js"></script>
+  </section>
   <footer class="custom-footer">
     <div class="footer-content">
       <img src="images/LogoImageWhite.png" alt="재단 로고" class="footer-logo">
@@ -179,6 +141,9 @@
       </p>
     </div>
   </footer>
-</body>
+  
+</main>
 
+<script src="script3.js"></script>
+</body>
 </html>
