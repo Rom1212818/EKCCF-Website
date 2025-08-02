@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     eventsContainer.addEventListener('scroll', updateThumb);
     window.addEventListener('resize', updateThumb);
-    updateThumb(); // Initial call
+    updateThumb(); // Initial ll
 
     let isDragging = false;
     let startX;
@@ -363,5 +363,75 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initial render
     renderEvents();
+  }
+
+  // 6. Notice Carousel
+  const noticeCarousel = document.querySelector('.notice-carousel');
+  if (noticeCarousel) {
+    const slides = noticeCarousel.querySelectorAll('.notice-slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function nextNotice() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    setInterval(nextNotice, 5000); // Change slide every 3 seconds
+  }
+
+  const performanceCarousel = document.querySelector('.performance-carousel');
+  if (performanceCarousel) {
+    const slides = Array.from(performanceCarousel.querySelectorAll('.carousel-slide'));
+    const indicators = Array.from(performanceCarousel.querySelectorAll('.indicator'));
+    const nextButton = performanceCarousel.querySelector('.carousel-nav.right');
+    const prevButton = performanceCarousel.querySelector('.carousel-nav.left');
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        slide.style.zIndex = i === index ? 2 : 1;
+        slide.style.opacity = i === index ? 1 : 0;
+      });
+
+      indicators.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    window.nextSlide = () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    };
+
+    window.prevSlide = () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    };
+
+    indicators.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        showSlide(currentIndex);
+      });
+    });
+
+    // Auto-rotate every 4 seconds
+    setInterval(() => {
+      window.nextSlide();
+    }, 4000);
+
+    // Initial display
+    showSlide(currentIndex);
   }
 });
