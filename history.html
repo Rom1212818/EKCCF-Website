@@ -3,56 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>역사 | 한인문화재단</title>
+  <title>인사말 | 한인문화재단</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-        <div class="nav-container">
-          <!-- Left: Logo and EKCCF -->
-          <div class="nav-left">
-            <a href="index.html" class="nav-branding">
-              <img src="images/logo3.png" alt="EKCCF 로고" />
-              <span class="nav-text">에드먼튼 한인문화재단</span>
-            </a>
-          </div>
-  
-          <!-- Center: Navigation menu -->
-          <ul class="nav-menu">
-            <li class="dropdown">
-              <a href="about.html">재단소개</a>
-              <ul class="dropdown-menu">
-                <li><a href="history.html">역사</a></li>
-                <li><a href="organization.html">조직도</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="culture.html">세종문화원</a>
-              <ul class="dropdown-menu">
-                <li><a href="programs.html">프로그램</a></li>
-                <li><a href="facility.html">시설 안내</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="orchestra.html">세종오케스트라</a>
-              <ul class="dropdown-menu">
-                <li><a href="performance.html">정기공연</a></li>
-                <li><a href="orchestra-members.html">단원</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="choir.html">세종합창단</a>
-              <ul class="dropdown-menu">
-                <li><a href="children-choir.html">어린이 합창단</a></li>
-                <li><a href="mothers-choir.html">어머니 합창단</a></li>
-              </ul>
-            </li>
-            <li><a href="inquiry.html">문의</a></li>
-            <li><a href="announcement.html">공지사항</a></li>
-          </ul>
+  <header class="main-header">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
         </div>
-      </nav>
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
+        <ul class="nav-menu">
+          <li class="dropdown">
+            <a href="about.html">
+              <span class="lang-ko">재단소개</span>
+              <span class="lang-en" style="display: none;">About Us</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="about.html">
+                <span class="lang-ko">인사말</span>
+                <span class="lang-en" style="display: none;">About us</span>
+              </a></li>
+              <li><a href="organization.html">
+                <span class="lang-ko">소개 및 조직도</span>
+                <span class="lang-en" style="display: none;">Introduction</span>
+              </a></li>
+              <li><a href="location.html">
+                <span class="lang-ko">오시는 길</span>
+                <span class="lang-en" style="display: none;">Organization</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="culture.html">
+              <span class="lang-ko">세종문화원</span>
+              <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="IntroCulture.html">
+                <span class="lang-ko">인사말</span>
+                <span class="lang-en" style="display: none;">About us</span>
+              </a></li>
+              <li><a href="programs.html">
+                <span class="lang-ko">프로그램</span>
+                <span class="lang-en" style="display: none;">Programs</span>
+              </a></li>
+              <li><a href="facility.html">
+                <span class="lang-ko">시설 안내</span>
+                <span class="lang-en" style="display: none;">Facility</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="orchestra.html">
+              <span class="lang-ko">세종오케스트라</span>
+              <span class="lang-en" style="display: none;">Sejong Orchestra</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="performance.html">
+                <span class="lang-ko">정기공연</span>
+                <span class="lang-en" style="display: none;">Performances</span>
+              </a></li>
+              <li><a href="orchestra-members.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
+              </a></li>
+              <li><a href="orchestraApply.html">
+                <span class="lang-ko">신청</span>
+                <span class="lang-en" style="display: none;">Apply</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li class="dropdown">
+            <a href="choir.html">
+              <span class="lang-ko">세종합창단</span>
+              <span class="lang-en" style="display: none;">Sejong Choir</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="choir.html">
+                <span class="lang-ko">어머니/어린이 합창단</span>
+                <span class="lang-en" style="display: none;">Mother/Children Choir</span>
+              </a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="inquiry.html">
+              <span class="lang-ko">문의</span>
+              <span class="lang-en" style="display: none;">Contact</span>
+            </a>
+          </li>
+      
+          <li>
+            <a href="announcement.html">
+              <span class="lang-ko">공지사항</span>
+              <span class="lang-en" style="display: none;">Announcements</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
   </header>
   <section class="president-message">
     <div class="container">
