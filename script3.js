@@ -195,20 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
             cost: '$120/hour (5 hrs minimum) or $1200/day (12pm - 12am)',
             description: `Capacity of 330 banquet style; 528 theatre style<br><br>High ceiling (28 feet) with 6 sectional lights (not dimming lights)<br><br>Any size of stage can be provided as requested (additional cost)<br><br>Cleaning service can be arranged (additional cost)<br><br>Maximum of 26 round tables (accommodating 8-10 people) and 300 chairs will be provided.<br><br>Kitchen,bar, and hallway is connected.`
         },
-        'conference room': {
-            image: 'images/conferenceroom.png',
-            title: '컨퍼런스 룸',
-            size: '800 square feet',
-            cost: '$50/hour (3hours minimum) or  $400/day (12pm - 12am)/hour',
-            description: 'Podium, tables, projector, screen and chairs can be provided as requested (no extra charge)Cleaning service can be arranged (additional cost of 20 dollars)'
-        },
-        'classroom': {
-            image: 'images/classroom.png',
-            title: '클래스룸',
-            size: '250 square feet',
-            cost: '$25/hour (3hours minimum) or  $200/day (12pm - 12am)',
-            description: '소규모 강의나 스터디에 적합한 공간입니다. 책상과 의자가 마련되어 있습니다. capacity of 15 classroom style; 30 theatre style'
-        },
         'kitchen': {
             image: 'images/kitchen.png',
             title: '주방',
