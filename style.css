@@ -1059,6 +1059,12 @@ h2 {
 .facility-info strong {
   font-weight: 600;
 }
+.facility-status {
+  color: red;
+  font-weight: bold;
+  margin-top: 4px; /* space between size and status text */
+}
+
 
 .facility-description {
   margin-top: 1.5rem;
