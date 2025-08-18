@@ -120,23 +120,35 @@
       </div>
       
   </header>
+  <section class="about-page-intro">
+    <div class="intro-content">
+      <h2>
+          <span class="lang-ko">문의</span>
+          <span class="lang-en" style="display: none;">Introduction</span>
+      </h2>
+      <p>
+          <span class="lang-ko">내일을 향해 함께 만드는 발걸음</span>
+          <span class="lang-en" style="display: none;">Welcome to the Edmonton Sejong Cultural Foundation.</span>
+      </p>
+    </div>
+  </section>
   <section class="inquiry-section">
     <div class="inquiry-header">
-      <h1 class="inquiry-title">문의하기</h1>
       <p class="inquiry-subtitle">프로그램이나 서비스에 대해 궁금한 점이 있으신가요? 메시지를 남겨주시면 최대한 빨리 연락드리겠습니다.</p>
     </div>
+  
     <div class="container">
-      <form class="contact-form">
+      <form id="inquiry-form" class="contact-form">
         <h2 class="form-heading">📧 연락처 양식</h2>
   
         <div class="form-grid">
           <div class="form-group">
             <label for="name">👤 이름 *</label>
-            <input type="text" id="name" name="name" placeholder="이름을 입력해주세요" required>
+            <input type="text" id="name" name="from_name" placeholder="이름을 입력해주세요" required>
           </div>
           <div class="form-group">
             <label for="email">✉️ 이메일 *</label>
-            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            <input type="email" id="email" name="from_email" placeholder="example@email.com" required>
           </div>
         </div>
   
@@ -155,10 +167,67 @@
           <textarea id="message" name="message" placeholder="내용을 입력해주세요..." required></textarea>
         </div>
   
+        <!-- Honeypot (spam trap) -->
+        <input type="text" id="website" name="website" style="display:none" tabindex="-1" autocomplete="off">
+  
         <button type="submit" class="submit-btn">문의 보내기</button>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
       </form>
     </div>
   </section>
+  
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS with your Public Key
+    emailjs.init({ publicKey: '40B3gNPAJqU5Sx_Ed' });
+  
+    const form = document.getElementById('inquiry-form');
+    const statusEl = document.getElementById('form-status');
+    const submitBtn = form.querySelector('.submit-btn');
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+  
+      // Honeypot check (bots will fill this hidden field)
+      if (document.getElementById('website').value) return;
+  
+      // Collect values
+      const templateParams = {
+        to_email: 'manager@sejong.ca',          // set recipient in template or pass dynamically
+        from_name: form.name.value,
+        from_email: form.email.value,
+        phone: form.phone.value || '-',
+        subject: form.subject.value,
+        message: form.message.value,
+        page_url: window.location.href
+      };
+  
+      // UX feedback
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = '전송 중...';
+      statusEl.className = 'form-status';
+      statusEl.textContent = '';
+  
+      try {
+        // Send via EmailJS
+        await emailjs.send('service_ovcrvb5', 'template_3fweu0f', templateParams);
+  
+        statusEl.textContent = '메시지가 전송되었습니다. 감사합니다!';
+        statusEl.classList.add('success');
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        statusEl.textContent = '전송에 실패했습니다. 잠시 후 다시 시도해주세요.';
+        statusEl.classList.add('error');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
+  
   
   <footer class="custom-footer">
     <div class="footer-content">
@@ -169,7 +238,7 @@
       <div class="footer-contact">
         <span><i class="fas fa-phone-alt"></i> 780-246-9464</span>
         <span class="divider">|</span>
-        <span><i class="fas fa-mail-bulk"></i> Sejong@gmail.com</span>
+        <span><i class="fas fa-mail-bulk"></i> manager@sejong.ca</span>
       </div>
       <p class="footer-rights">
         ©Edmonton Sejong Multicultural Center. <span class="gray">all rights reserved</span>

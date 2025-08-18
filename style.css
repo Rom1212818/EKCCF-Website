@@ -1512,7 +1512,7 @@ h2 {
 .facility-tabs .tab {
   background: none;
   border: none;
-  font-size: 0.6rem;
+  font-size: 1rem;
   color: #333;
   cursor: pointer;
   padding: 0.5rem 0;
@@ -1940,7 +1940,7 @@ h2 {
 }
 
 .inquiry-subtitle {
-  text-align: center;
+  text-align: left;
   color: #555;
   font-size: 1rem;
   margin-bottom: 2rem;
@@ -2013,6 +2013,10 @@ textarea {
 .submit-btn:hover {
   background-color: #b82323;
 }
+.form-status { margin-top: 10px; font-size: 0.95rem; }
+.form-status.success { color: #15803d; }  /* green */
+.form-status.error { color: #b91c1c; }    /* red */
+.submit-btn[disabled] { opacity: 0.6; cursor: not-allowed; }
 
 
 /*=============================================================Annoucements========================================================*/
