@@ -125,18 +125,109 @@
     <div class="intro-content">
       <h2>
           <span class="lang-ko">오시는 길</span>
-          <span class="lang-en" style="display: none;">Introduction</span>
+          <span class="lang-en" style="display: none;">Our Location</span>
       </h2>
       <p>
           <span class="lang-ko">에드먼튼 한인문화재단에 오신 것을 환영합니다!</span>
-          <span class="lang-en" style="display: none;">Welcome to the Edmonton Sejong Cultural Foundation.</span>
+          <span class="lang-en" style="display: none;">Welcome to the Edmonton Sejong Cultural Foundation!</span>
       </p>
     </div>
   </section>
 
-  <div class="location-image-container">
-    <img src="images/location.png" alt="Sejong Cultural Center Location">
+
+  <div class="map-address-wrap">
+
+    <!-- Interactive Map Card -->
+    <section class="card map-card">
+      <h2 class="card-title">
+        <span class="lang-en">Interactive Map</span>
+        <span class="lang-ko" style="display:none;">인터랙티브 지도</span>
+      </h2>
+      <p class="card-subtitle">
+        <span class="lang-en">Click and drag to explore the area around our building</span>
+        <span class="lang-ko" style="display:none;">건물 주변 지도를 드래그하여 둘러보세요</span>
+      </p>
+  
+    </section>
+
+
+    
+  
+    <!-- Address Card -->
+    <section class="card address-card">
+      <h2 class="card-title">
+        <span class="lang-en">Address</span>
+        <span class="lang-ko" style="display:none;">주소 안내</span>
+      </h2>
+  
+      <p class="address-text">
+        <span class="lang-en">2503 Ellwood Dr SW, Edmonton, AB T6X 0P7</span>
+        <span class="lang-ko" style="display:none;">2503 Ellwood Dr SW, Edmonton, AB T6X 0P7</span>
+      </p>
+  
+      <a
+        id="directions-btn"
+        class="directions-btn"
+        href="https://www.google.com/maps/dir/?api=1&destination=2503+Ellwood+Dr+SW,+Edmonton,+AB+T6X+0P7"
+        target="_blank" rel="noopener"
+      >
+        <span class="lang-en">Get Directions on Google Maps</span>
+        <span class="lang-ko" style="display:none;">Google 지도로 길찾기</span>
+      </a>
+    </section>
   </div>
+  
+  <!-- Google Maps JS (replace YOUR_API_KEY) -->
+  <script>
+    // Set your location here (lat/lng)
+    const LOCATION = { lat: 53.42998, lng: -113.47186 }; // Example: Gwanghwamun
+  
+    // Called by Google Maps script
+    function initMap() {
+      try {
+        const map = new google.maps.Map(document.getElementById('map'), {
+          center: LOCATION,
+          zoom: 16,
+          mapTypeControl: false,
+          streetViewControl: false,
+        });
+  
+        new google.maps.Marker({
+          position: LOCATION,
+          map,
+          title: 'Our Location',
+        });
+      } catch (e) {
+        showMapError();
+      }
+    }
+  
+    // If the Google script fails to load or key is invalid, show error
+    function showMapError() {
+      const errEl = document.getElementById('map-error');
+      if (errEl) errEl.hidden = false;
+    }
+  
+    // Google Maps API auth failure hook
+    window.gm_authFailure = showMapError;
+  
+    // Dynamically load the Maps script so we can catch load errors
+    (function loadMaps() {
+      const s = document.createElement('script');
+      s.async = true;
+      s.defer = true;
+      s.src = "https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap";
+      s.onerror = showMapError;
+      document.head.appendChild(s);
+    })();
+  </script>
+  
+
+
+
+
+
+
   <footer class="custom-footer">
     <div class="footer-content">
       <img src="images/LogoImageWhite.png" alt="재단 로고" class="footer-logo">

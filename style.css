@@ -1393,6 +1393,79 @@ h2 {
     color: #555;
   }
 }
+/*==============================================================Location=======================================================*/
+.map-address-wrap {
+  display: grid;
+  gap: 24px;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  padding: 1rem;
+}
+
+.card-subtitle {
+  color: #6b7280; /* gray-500 */
+  margin: 0 0 16px 0;
+}
+
+.map {
+  width: 100%;
+  height: 320px;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+
+.map-error {
+  margin-top: 12px;
+  color: #b91c1c;  /* red-700 */
+  font-weight: 600;
+}
+
+
+
+.address-text {
+  color: #374151;
+  margin: 0 0 16px 0;
+  padding-top: 1rem;
+}
+
+.directions-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: #26bbdc; /* red-600 */
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: filter .15s ease;
+}
+.directions-btn:hover { filter: brightness(1.05); }
+
+/* Layout: stack on mobile, two columns on desktop */
+@media (min-width: 992px) {
+  .map-address-wrap {
+    grid-template-columns: 1fr 1fr;
+  }
+  .map { height: 360px; }
+}
+
 /*=============================================================Organization===================================================*/
 .foundation-message-section {
   background-color: #ffffff;
