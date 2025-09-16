@@ -1567,6 +1567,18 @@ h2 {
   cursor: pointer;
 }
 /* ======================================================================Facility=============================================*/
+.rent-notice {
+  text-align: center;
+}
+
+.rent-notice h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: red;
+}
+
 .facility-wrapper {
   padding: 2rem 1rem;
   max-width: 900px;
