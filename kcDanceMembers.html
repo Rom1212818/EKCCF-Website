@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>달력 | Sejong Multicultural Center</title>
+  <title>단원 | KPOP 댄스팀</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="main-header">
     <div class="logo-container">
       <a href="index.html" class="nav-branding">
-        <img src="images/LogoImage.png" alt="EKCCF 로고" class="logo"/>
+        <img src="images/finallogo3.png" alt="EKCCF 로고" class="logo"/>
       </a>
     </div>
     <nav class="main-nav">
@@ -35,11 +35,11 @@
             <ul class="dropdown-menu">
               <li><a href="about.html">
                 <span class="lang-ko">인사말</span>
-                <span class="lang-en" style="display: none;">History</span>
+                <span class="lang-en" style="display: none;">About us</span>
               </a></li>
               <li><a href="organization.html">
-                <span class="lang-ko">소개및 조직도</span>
-                <span class="lang-en" style="display: none;">Organization</span>
+                <span class="lang-ko">소개 및 조직도</span>
+                <span class="lang-en" style="display: none;">Introduction</span>
               </a></li>
               <li><a href="location.html">
                 <span class="lang-ko">오시는 길</span>
@@ -54,6 +54,10 @@
               <span class="lang-en" style="display: none;">Sejong Culture Center</span>
             </a>
             <ul class="dropdown-menu">
+              <li><a href="IntroCulture.html">
+                <span class="lang-ko">인사말</span>
+                <span class="lang-en" style="display: none;">About us</span>
+              </a></li>
               <li><a href="programs.html">
                 <span class="lang-ko">프로그램</span>
                 <span class="lang-en" style="display: none;">Programs</span>
@@ -79,6 +83,10 @@
                 <span class="lang-ko">단원</span>
                 <span class="lang-en" style="display: none;">Members</span>
               </a></li>
+              <li><a href="orchestraApply.html">
+                <span class="lang-ko">신청</span>
+                <span class="lang-en" style="display: none;">Apply</span>
+              </a></li>
             </ul>
           </li>
       
@@ -91,6 +99,10 @@
               <li><a href="choir.html">
                 <span class="lang-ko">정기공연</span>
                 <span class="lang-en" style="display: none;">Performance</span>
+              </a></li>
+              <li><a href="kcDanceMembers.html">
+                <span class="lang-ko">단원</span>
+                <span class="lang-en" style="display: none;">Members</span>
               </a></li>
             </ul>
           </li>
@@ -112,38 +124,65 @@
       </div>
       
   </header>
-      
-  <section class="about-page-intro">
+  <section class="orchestra-intro">
     <div class="intro-content">
-      <h2>
-          <span class="lang-ko">달력</span>
-          <span class="lang-en" style="display: none;">Introduction</span>
-      </h2>
+      <h2>단원 소개</h2>
       <p>
-          <span class="lang-ko">내일을 향해 함께 만드는 발걸음</span>
-          <span class="lang-en" style="display: none;">Welcome to the Edmonton Sejong Cultural Foundation.</span>
+        전통의 아름다움과 현대의 감각을 담은 한국무용팀 입니다.
+        섬세한 움직임과 깊은 울림으로 한국무용의 매력을 전합니다.
+        <br><br>
       </p>
+    </div>
+  </section>
+  <section class="orchestra-filter">
+    <h2>KPOP 댄스팀 멤버</h2>
+    <div class="filter-tabs">
+      <button class="tab active" data-filter="all">전체</button>
+      <button class="tab" data-filter="executive">임원</button>
+      <button class="tab" data-filter="violin">유아팀</button>
+      <button class="tab" data-filter="cello">유스팀</button>
+      <button class="tab" data-filter="flute">성인팀</button>
+      <button class="tab" data-filter="clarinet">공연팀</button>
+     <!--<button class="tab" data-filter="horn">호른</button>
+      <button class="tab" data-filter="trombone">트롬본</button>
+      <button class="tab" data-filter="piano">피아노</button>-->
+    </div>
+  </section>
+  
+  
+  <section class="orchestra-members">
+    <!-- <h3>오케스트라 단원</h3> -->
+    <div class="member-grid">
+        <div class="member-card" data-category="executive">
+        <img src="images/director.jpg" alt="사진">
+        <div class="member-info">
+          <h4></h4>
+          <p>단장</p>
+        </div>
+      </div>
+    
+
+      <!-- Add more members, same format -->
     </div>
   </section>
   <footer class="custom-footer">
     <div class="footer-content">
-      <img src="images/LogoImageWhite.png" alt="재단 로고" class="footer-logo">
+      <img src="images/finallogo3.png" alt="재단 로고" class="footer-logo">
       <p class="footer-address">
         2503 Ellwood Dr SW, Edmonton, AB
       </p>
       <div class="footer-contact">
         <span><i class="fas fa-phone-alt"></i> 780-246-9464</span>
         <span class="divider">|</span>
-        <span><i class="fas fa-mail-bulk"></i> Sejong@gmail.com</span>
+        <span><i class="fas fa-mail-bulk"></i> Info@SejongEdmonton.ca</span>
       </div>
       <p class="footer-rights">
         ©Edmonton Sejong Multicultural Center. <span class="gray">all rights reserved</span>
       </p>
     </div>
   </footer>
-  
-</main>
+  <script src="script3.js"></script>
 
-<script src="script3.js"></script>
+
 </body>
 </html>

@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  
 
   // Language Switcher
   window.setLanguage = (lang) => {

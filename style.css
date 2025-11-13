@@ -20,7 +20,7 @@ body, html {
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 2rem; /* Reduced vertical padding */
-    background-color: #ffffff;
+    background-color: #19558B;
     border-bottom: 0px solid #dee2e6;
     position: sticky;
     top: 0;
@@ -223,7 +223,7 @@ body, html {
       justify-content: space-between;
       align-items: center;
       padding: 0.5rem 2rem; /* Reduced vertical padding */
-      background-color: #ffffff;
+      background-color: #19558B;
       border-bottom: 0px solid #dee2e6;
       position: sticky;
       top: 0;
@@ -277,7 +277,7 @@ body, html {
   
   .lang-btn {
       text-decoration: none;
-      color: #000000;
+      color: #ffffff;
       font-weight: 700;
       padding: 0.5rem;
       border-radius: 5px;
@@ -328,7 +328,7 @@ body, html {
       display: block;
       width: 100%;
       height: 3px;
-      background-color: #000000;
+      background-color: #ffffff;
       border-radius: 3px;
       transition: all 0.3s ease-in-out;
   }
@@ -405,6 +405,7 @@ body, html {
       border-top: 1px solid #eee;
   }
 }
+
 
 /*==========================================================Index.html=======================================================*/
 .title-section {
@@ -800,6 +801,33 @@ h2 {
   width: 45px;
   height: 45px;
 }
+.event-card { /*Event cards in index.html*/
+  flex: 0 0 150px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 200px; /* Set a fixed height for the cards */
+}
+
+.card-title {
+  text-align: center;
+  padding: 0.1rem;
+  flex-shrink: 0; /* Prevent the title from shrinking */
+  height: 3%;
+  font-size: 0.7rem;
+}
+
+.event-card img {
+  width: calc(100% - 2rem); /* 1rem padding on left and right */
+  height: 80%;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+  border-radius: 15px;
 }
 /*----------------------------------------notice---------------------------------------------*/
 .notice-box {
@@ -1408,7 +1436,7 @@ h2 {
   border: 1px solid rgba(0,0,0,0.06);
 }
 
-.card-title {
+.locard-title {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -2778,7 +2806,7 @@ section {
   padding: 1.5rem;
 }
 .orchestra-intro {
-  background-image: url('images/OrchestraBackground1.png'); /* Update with your image path */
+  background-image: url('images/palacebackground2.jpg'); /* Update with your image path */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2795,12 +2823,14 @@ section {
 .orchestra-intro h2 {
   color: white;
   font-size:1.5rem;
+  text-align: left;
 }
 
 .orchestra-intro p {
   font-size: 0.9rem;
   color: #ffffff;
   line-height: 1.5;
+  text-align: left;
 }
 .executive-members h3,
 .orchestra-members h3 {
@@ -2890,5 +2920,4 @@ section {
   padding: 1rem;
 }
 }
-
-
+}
