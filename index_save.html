@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>에드먼튼 세종문화원</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body>   
+  <header class="main-header-index">
+    <div class="logo-container">
+      <a href="index.html" class="nav-branding">
+        <img src="images/finallogo4.png" alt="EKCCF 로고" class="logo"/>
+      </a>
+    </div>
+    <nav class="main-nav">
+        <div class="lang-buttons">
+            <button class="lang-btn-index" onclick="setLanguage('ko')">KR</button>
+            <button class="lang-btn-index" onclick="setLanguage('en')">EN</button>
+        </div>
+        <button class="hamburger-menu-index" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <!-- Center: Navigation menu -->
+    <div class="hamburger-wrapper">
+      <ul class="nav-menu">
+        <li class="dropdown">
+          <a href="about.html">
+            <span class="lang-ko">재단소개</span>
+            <span class="lang-en" style="display: none;">About Us</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="about.html">
+              <span class="lang-ko">인사말</span>
+              <span class="lang-en" style="display: none;">About us</span>
+            </a></li>
+            <li><a href="organization.html">
+              <span class="lang-ko">소개 및 조직도</span>
+              <span class="lang-en" style="display: none;">Introduction</span>
+            </a></li>
+            <li><a href="location.html">
+              <span class="lang-ko">오시는 길</span>
+              <span class="lang-en" style="display: none;">Organization</span>
+            </a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="culture.html">
+            <span class="lang-ko">세종문화원</span>
+            <span class="lang-en" style="display: none;">Sejong Culture Center</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="IntroCulture.html">
+              <span class="lang-ko">인사말</span>
+              <span class="lang-en" style="display: none;">About us</span>
+            </a></li>
+            <li><a href="programs.html">
+              <span class="lang-ko">프로그램</span>
+              <span class="lang-en" style="display: none;">Programs</span>
+            </a></li>
+            <li><a href="facility.html">
+              <span class="lang-ko">시설 안내</span>
+              <span class="lang-en" style="display: none;">Facility</span>
+            </a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="orchestra.html">
+            <span class="lang-ko">KPOP 댄스팀</span>
+            <span class="lang-en" style="display: none;">KPOP Korean Cultural Dance Team</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="performance.html">
+              <span class="lang-ko">정기공연</span>
+              <span class="lang-en" style="display: none;">Performances</span>
+            </a></li>
+            <li><a href="orchestra-members.html">
+              <span class="lang-ko">단원</span>
+              <span class="lang-en" style="display: none;">Members</span>
+            </a></li>
+            <li><a href="orchestraApply.html">
+              <span class="lang-ko">신청</span>
+              <span class="lang-en" style="display: none;">Apply</span>
+            </a></li>
+          </ul>
+        </li>
+    
+        <li class="dropdown">
+          <a href="choir.html">
+            <span class="lang-ko">한국 무용단</span>
+            <span class="lang-en" style="display: none;">Korean Cultural Dance Team</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="choir.html">
+              <span class="lang-ko">정기공연</span>
+              <span class="lang-en" style="display: none;">Performance</span>
+            </a></li>
+            <li><a href="kcDanceMembers.html">
+              <span class="lang-ko">단원</span>
+              <span class="lang-en" style="display: none;">Members</span>
+            </a></li>
+          </ul>
+        </li>
+    
+        <li>
+          <a href="inquiry.html">
+            <span class="lang-ko">문의</span>
+            <span class="lang-en" style="display: none;">Contact</span>
+          </a>
+        </li>
+    
+        <li>
+          <a href="announcement.html">
+            <span class="lang-ko">공지사항</span>
+            <span class="lang-en" style="display: none;">Announcements</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+      
+  </header>
+
+  <main> 
+    
+    <section class="intro-section">
+        <div class="intro-content">
+         
+          <div class="search-bar">
+            <input type="text" placeholder="찾으시는 정보 또는 서비스를 입력하세요" />
+            <button class="search-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        
+  </section>      
+<div class="icon-grid-container">
+      <div class="icon-grid">
+      <a href="IntroCulture.html" class="icon-card">
+        <img src="images/introduction.png" alt="재단소개 아이콘" />
+        <p><span class="lang-ko">재단소개</span><span class="lang-en" style="display: none;">About Us</span></p>
+      </a>
+      <a href="facility.html" class="icon-card">
+        <img src="images/facility2.png" alt="시설 안내 아이콘" />
+        <p><span class="lang-ko">시설 안내</span><span class="lang-en" style="display: none;">Facility</span></p>
+      </a>
+      <a href="organization.html" class="icon-card">
+        <img src="images/organization2.png" alt="조직도 아이콘" />
+        <p><span class="lang-ko">조직도</span><span class="lang-en" style="display: none;">Organization</span></p>
+      </a>
+      <a href="calendar.html" class="icon-card">
+        <img src="images/location_icon.png" alt="달력 아이콘" />
+        <p><span class="lang-ko">오시는 길</span><span class="lang-en" style="display: none;">Location</span></p>
+      </a>
+      <a href="inquiry.html" class="icon-card">
+        <img src="images/inquiry2.png" alt="문의 아이콘" />
+        <p><span class="lang-ko">문의</span><span class="lang-en" style="display: none;">Contact</span></p>
+      </a>
+      <a href="location.html" class="icon-card">
+        <img src="images/announcement2.png" alt="인스타 아이콘" />
+        <p><span class="lang-ko">공지사항</span><span class="lang-en" style="display: none;">Announcements</span></p>
+      </a>
+      <a href="programs.html" class="icon-card">
+          <img src="images/programs_icon.png" alt="인스타 아이콘" />
+          <p><span class="lang-ko">프로그램</span><span class="lang-en" style="display: none;">Programs</span></p>
+      </a>
+      <a href="orchestra-members.html" class="icon-card">
+          <img src="images/kpop1.png" alt="인스타 아이콘" />
+          <p><span class="lang-ko">KPOP 댄스팀</span><span class="lang-en" style="display: none;">KPOP Dance Team</span></p>
+      </a>
+      <a href="choir.html" class="icon-card">
+          <img src="images/culturedance1.png" alt="인스타 아이콘" />
+          <p><span class="lang-ko">무용단</span><span class="lang-en" style="display: none;">Korean Cultural Dance Team</span></p>
+      </a>
+  </div>
+  </div>
+
+
+
+  <section class="notice-box">
+        <div class="notice-left">
+          <h2 class="notice-title">공지사항 <span class="dot"></span></h2>
+          <a href="announcement.html" class="notice-more">
+            더보기 <span class="plus-icon">+</span>
+          </a>
+        </div>
+      
+        <div class="notice-carousel">
+          <div class="notice-slide active">
+            <div class="notice-tag-date">
+              <span class="notice-tag">모집</span>
+              <span class="notice-date">2025.07.24</span>
+            </div>
+            <p class="notice-text">세종문화센터 여름 캠프 자원봉사자 모집 안내</p>
+          </div>
+      
+          <div class="notice-slide">
+            <div class="notice-tag-date">
+              <span class="notice-tag">공지</span>
+              <span class="notice-date">2025.07.20</span>
+            </div>
+            <p class="notice-text">세종문화센터 여름 프로그램 안내</p>
+          </div>
+      
+          <div class="notice-slide">
+            <div class="notice-tag-date">
+              <span class="notice-tag">안내</span>
+              <span class="notice-date">2025.07.18</span>
+            </div>
+            <p class="notice-text">광복절 휴무 안내 (8월 15일)</p>
+          </div>
+        </div>
+        <div class="notice-slide">
+          <div class="notice-tag-date">
+            <span class="notice-tag">신청</span>
+            <span class="notice-date">2025.07.18</span>
+          </div>
+          <p class="notice-text">어린이/어머니 합창단 신규 단원 모집</p>
+        </div>
+      </div>
+      </section>
+  
+
+
+      
+
+
+      
+      
+      <section class="performance-carousel">
+        <div class="carousel-header">
+          <h2><span>진행중인</span> <strong>공연·프로그램</strong></h2>
+          <p class="carousel-sub">현재 진행중인 공연 · 프로그램들을 확인 하실수 있습니다.</p>
+        </div>
+      
+        <div class="carousel-wrapper">
+          <button class="carousel-nav left" onclick="prevSlide()">&#8249;</button>
+      
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <a href="programs.html">
+                <img src="images/summercamp2025.JPG" alt="Event 2" />
+                <p class="slide-caption">2025 어린이 여름 캠프</p>
+              </a>
+            </div>
+          </div>
+      
+          <button class="carousel-nav right" onclick="nextSlide()">&#8250;</button>
+        </div>
+      
+        <div class="carousel-indicators">
+          <span class="indicator active"></span>
+          <span class="indicator"></span>
+          <span class="indicator"></span>
+        </div>
+      </section>
+      
+ 
+      
+    <section class="title-section">
+      <h2><span class="lang-ko"> 전체 프로그램</span><span class="lang-en" style="display: none;">Programs</span></h2>
+      <a href="/programs.html" class="announcement-link">+</a>
+    </section>
+
+    <section class="filter-tabs">
+      <button class="tab-btn active" data-filter="all"><span class="lang-ko">전체</span><span class="lang-en" style="display: none;">All</span></button>
+      <button class="tab-btn" data-filter="workshops"><span class="lang-ko">세종문화원</span><span class="lang-en" style="display: none;">Sejong Cultural Center</span></button>
+      <button class="tab-btn" data-filter="performances"><span class="lang-ko">KPOP 댄스팀</span><span class="lang-en" style="display: none;">KPOP Korean Cultural Dance Team</span></button>
+      <button class="tab-btn" data-filter="classes"><span class="lang-ko">한국 무용단</span><span class="lang-en" style="display: none;">Korean Cultural Dance Team</span></button>
+    </section>
+
+    <section class="events-container">
+      <div class="event-card" data-category="workshops">
+        <div class="card-title"><span class="lang-ko">여름 캠프</span><span class="lang-en" style="display: none;">Summer Camp</span></div>
+        <img src="images/summercamp2025.JPG" alt="Event 1 Poster">
+      </div>
+
+    </section>
+
+    <!-- Custom Scrollbar -->
+    <div class="custom-scrollbar-container">
+      <div class="custom-scrollbar-track">
+        <div class="custom-scrollbar-thumb"></div>
+      </div>
+    </div>
+ <!-- Title Outside -->
+    
+    
+
+      <footer class="custom-footer">
+        <div class="footer-content">
+          <img src="images/finallogo4.png" alt="재단 로고" class="footer-logo">
+          <p class="footer-address">
+            2503 Ellwood Dr SW, Edmonton, AB
+          </p>
+          <div class="footer-contact">
+            <span><i class="fas fa-phone-alt"></i> 780-246-9464</span>
+            <span class="divider">|</span>
+            <span><i class="fas fa-mail-bulk"></i> Info@SejongEdmonton.ca</span>
+          </div>
+          <p class="footer-rights">
+            ©Edmonton Sejong Multicultural Center. <span class="gray">all rights reserved</span>
+          </p>
+        </div>
+      </footer>
+      
+  </main>
+
+  <script src="script3.js"></script>
+</body>
+</html>
