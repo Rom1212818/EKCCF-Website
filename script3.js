@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Dropdown Menu (for mobile)
   document.querySelectorAll('.dropdown > a').forEach(link => {
     link.addEventListener('click', function (e) {
-      if (this.nextElementSibling && this.nextElementSibling.classList.contains('dropdown-menu')) {
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      if (isMobile && this.nextElementSibling && this.nextElementSibling.classList.contains('dropdown-menu')) {
         e.preventDefault();
         this.parentElement.classList.toggle('open');
         this.nextElementSibling.classList.toggle('open');
